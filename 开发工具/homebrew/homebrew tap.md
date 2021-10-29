@@ -1,7 +1,5 @@
-
-
 ## 介绍
-Formule安装脚本所在的仓库
+Formula安装脚本所在的仓库
 
 [How-to-Create-and-Maintain-a-Tap](https://github.com/Homebrew/brew/blob/master/docs/How-to-Create-and-Maintain-a-Tap.md)
 

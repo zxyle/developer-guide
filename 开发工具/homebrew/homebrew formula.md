@@ -6,7 +6,7 @@
 - [Node-for-Formula-Authors](https://github.com/Homebrew/brew/blob/master/docs/Node-for-Formula-Authors.md)
 - [Formula-Cookbook](https://docs.brew.sh/Formula-Cookbook)
 
-## 创建Formulae
+## 创建Formula
 ```
 brew create --python https://zxyle-homebrew.oss-cn-hangzhou.aliyuncs.com/tarballs/builder-0.0.1.tar.gz
 ```

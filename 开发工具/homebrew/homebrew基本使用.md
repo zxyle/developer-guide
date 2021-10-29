@@ -36,3 +36,29 @@ brew update
 - 重装: `brew reinstall package`
 - 更新: `brew update`
 - 卸载: `brew uninstall package`
+
+
+## 常用软件清单
+
+```
+brew install redis  brew services start
+lua
+python@3.9
+maven
+scala
+gh
+git
+mysql
+go
+nginx
+telnet
+gradle
+wget
+groovy
+kafka
+zookeeper
+openjdk
+zstd
+gpg
+```
+
