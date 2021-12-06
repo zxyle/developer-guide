@@ -1,0 +1,6 @@
+- GOPROXY 配置module代理
+- GOSUMDB
+- GOPRIVATE  配置私有仓库， 如http://gitlab.com/xxx
+- GONOPROXY
+- GONOSUMDB
+- GOMODCACHE
