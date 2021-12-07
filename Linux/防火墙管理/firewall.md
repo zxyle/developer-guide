@@ -1,7 +1,10 @@
 ## 介绍
 CentOS 7 防火墙
 
+
+
 ## 常用命令
+
 - 查看防火墙状态 `firewall-cmd --state` 或 `systemctl status firewalld`        
 - 停止防火墙     `systemctl stop firewalld`    
 - 禁止开机启动   `systemctl disable firewalld` 

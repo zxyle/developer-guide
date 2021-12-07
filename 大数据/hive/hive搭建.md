@@ -1,6 +1,6 @@
 ## 前置准备
 
-- Hadoop集群
+- Hadoop3.2.0集群
 - Mysql 8.0.23
 - [MySQL驱动](https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.23/mysql-connector-java-8.0.23.jar)
 - [hive3.1.2安装包](https://archive.apache.org/dist/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz)
@@ -111,14 +111,15 @@ mysql的密码
 
 
 
-## 初始化
+## 初始化metastore
 
 ```bash
 bin/schematool -dbType mysql -initSchema
 ```
 
 
-## 	启动
+
+## 	启动命令行窗口
 
 ```bash
 ./bin/hive
@@ -126,9 +127,17 @@ bin/schematool -dbType mysql -initSchema
 
 
 
+## 启动beeline
+
+```bash
+./bin/beeline -u jdbc:hive2://localhost:10000 -n root
+```
+
+
+
 ## 远程服务启动
 
-```
+```bash
 ./bin/hiveserver2
 ```
 

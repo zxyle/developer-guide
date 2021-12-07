@@ -5,7 +5,14 @@ HomeBrew是MacOS下的软件包管理工具
 
 - [官网](https://brew.sh/index_zh-cn)
 
+
+
+## 安装
+
+
+
 ## 配置镜像源
+
 https://developer.aliyun.com/mirror/homebrew
 
 ```
@@ -29,19 +36,26 @@ source ~/.zshrc
 brew update
 ```
 
+
+
 ## 基本操作
+
 - 安装: `brew install package`
 - 更新: `brew upgrade package`
 - 列出: `brew list`
 - 重装: `brew reinstall package`
 - 更新: `brew update`
 - 卸载: `brew uninstall package`
+- 列出服务: `brew services list`
+- 启动服务: `brew services start service`
+- 关闭服务: `brew services stop service`
+
 
 
 ## 常用软件清单
 
 ```
-brew install redis  brew services start
+brew install redis
 lua
 python@3.9
 maven
@@ -60,5 +74,6 @@ zookeeper
 openjdk
 zstd
 gpg
+watch
 ```
 

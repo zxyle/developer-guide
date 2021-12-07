@@ -53,7 +53,10 @@ POM(project object model)
 - dependencies  声明依赖
 - dependency    单个依赖
 
+
+
 ### scope
+
 - compile  默认, 表示编译打包都需要此类库
 - test   仅仅单元测试中需要
 - provided 编译阶段需要此类库但打包不需要 运行时候需要
@@ -104,3 +107,12 @@ mvn clean install -T 1C -Dmaven.test.skip=true -Dmaven.compile.fork=true
 - `-T 1C` ：代表每个CPU核心跑一个工程。
 - `-Dmaven.test.skip=true` ：代表跳过测试。
 - `-Dmaven.compile.fork=true` ：使用多线程编译
+
+
+
+## 安装本地jar包到本地仓库
+
+```bash
+mvn install:install-file -DgroupId=com.google.code -DartifactId=kaptcha -Dversion=2.3.2 -Dfile=kaptcha-2.3.2.jar -Dpackaging=jar -DgeneratePom=true
+```
+

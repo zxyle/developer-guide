@@ -6,7 +6,9 @@ Formula安装脚本所在的仓库
 官方仓库地址: `/usr/local/Homebrew/Library/Taps/homebrew`
 
 
+
 ## 常用命令
+
 - `brew tap`:  列出所有已安装tap
 - `brew untap`: 移除tap仓库
 

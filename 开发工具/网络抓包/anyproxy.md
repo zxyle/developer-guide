@@ -12,7 +12,7 @@ anyproxy是阿里开源的一个抓包工具 [官网地址](https://anyproxy.io/
 - 访问: http://127.0.0.1:8002
 
 ## rule的使用
-```
+```javascript
 // file: sample.js
 // anyproxy -i --rule sample.js
 
