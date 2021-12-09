@@ -10,5 +10,9 @@
 from parsel import Selector
 
 sel = Selector(html)
+
+sel.xpath()
+
+sel.css()
 ```
 

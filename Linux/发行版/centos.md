@@ -1,15 +1,6 @@
 ## 介绍
 centos 7以上安装及一些基本初始化配置
 
-## 镜像下载
-- [阿里云镜像站](https://mirrors.aliyun.com/centos/)
-- [腾讯软件源](https://mirrors.cloud.tencent.com/centos/)
-- [历史版本下载](https://mirrors.aliyun.com/centos-vault)
-- [历史版本下载](https://mirrors.cloud.tencent.com/centos-vault)
-- https://vault.centos.org
-
-打开对应版本下的 `isos/x86_64/` 目录
-
 ## 配置
 - 关闭防火墙
 

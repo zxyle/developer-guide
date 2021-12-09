@@ -39,3 +39,62 @@ p[contains(text(),'剩余时间')]
 ```
 
 ## string(.)
+
+
+
+## 元素选择
+
+
+
+
+
+## 获取标签内容
+
+### 1. 选择某个属性包含指定文本的html标签
+
+```xquery
+//div[contains(@class, "list-auto")]/div
+```
+
+> @class 也可以换成text(),用来获取标签文本包含相关文本的标签
+
+
+
+### 2. 多个相同的标签，按序号获取
+
+```xquery
+div[1]
+```
+
+> 序号从1开始，也支持-1
+
+
+
+### 1. 获取标签之间的内容
+
+```html
+<p id="p1">这是一段文本</p>
+```
+
+
+
+```xquery
+//p[@id="p1"]/text()
+```
+
+
+
+
+
+### 2. 获取标签的属性:
+
+```html
+<img id="bg" src="http://example.com/bg.jpg" />
+```
+
+
+
+```xquery
+//img[@id="bg"]/@src
+```
+

@@ -25,3 +25,18 @@ git config --local user.email "zxyful@gmail.com"
 git config --global core.quotepath false
 ```
 
+
+
+## 远程仓库管理
+
+```bash
+# 显示仓库信息
+git remote -v
+
+# 增加远程仓库（仓库名默认为origin）
+git remote add 仓库名 git@gitlab.com:xxx/yyy.git
+
+# 移除远程仓库
+git remote remove 仓库名
+```
+

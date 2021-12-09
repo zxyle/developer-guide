@@ -7,7 +7,7 @@ HiveQL
 ## 数据库操作
 
 ```sql
--- 显示所有数据库
+-- 显示所有数据库, 默认为default数据库
 show databases;
 
 -- 创建数据库
@@ -35,10 +35,10 @@ show tables;
 create table t1(id int, name string);
 
 -- 显示创建表
-show create table t2;
+show create table t1;
 
 -- 显示表结构
-DESC t2;
+DESC t1;
 
 -- 创建表
 create table testa (
@@ -47,8 +47,21 @@ create table testa (
   area string
 ) partitioned by (create_time string) row format delimited fields terminated by ',' stored as textfile;
 
+-- 表增加字段
+alter table t2 add columns(age int);
+
 -- 修改表名
 alter table t2 rename to t2_bak;
+
+-- 创建表的时候，指定列分隔符和行分隔符 （默认列分隔符^A \001）
+create table t5_new(
+  id int comment 'ID',
+  stu_name string comment 'name',
+  stu_birthday date comment 'birthday',
+  online boolean comment 'is online'
+) row format delimited 
+fields terminated by '\t'
+lines terminated by '\n';
 
 
 ```

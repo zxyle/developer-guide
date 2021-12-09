@@ -14,7 +14,31 @@ import pymongo
 # mongo_uri = "mongodb://spider:6Xaohuzof3KLp8BX@10.50.86.170:27017,10.50.86.171:27017,10.50.86.172:27017/spider"
 # mongo_uri = "mongodb://127.0.0.1:27017/spider"
 client = pymongo.MongoClient(MONGO_URI)
-db = client["spider"]
+db = client["spider"] # 数据库
+post = db["wenshu"]   # 表
+```
+
+
+
+## 查询
+
+```python
+# 第一个代表条件(where), 第二个为select 指定字段
+post.find({}, {"_id": 0})
+```
+
+
+
+## 新增
+
+```python
+from pymongo.errors import DuplicateKeyError
+
+doc = {"name": "zx", "age": 10}
+try:
+    post.insert_one()
+except DuplicateKeyError:
+    print("数据重复！")
 ```
 
 
