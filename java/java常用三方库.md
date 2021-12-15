@@ -4,6 +4,7 @@
 
 - https://code.google.com/archive/p/kaptcha/downloads
 - https://code.google.com/archive/p/patchca/
+- https://mvnrepository.com/artifact/com.github.whvcse/easy-captcha
 
 
 

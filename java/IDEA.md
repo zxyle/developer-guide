@@ -12,18 +12,25 @@
 
 ## 设置篇
 
-- 提示不区分大小写，   编辑器 -> 编辑器 -> 代码完成 -> 取消匹配大小写的勾
-- 隐藏不想看到的文件   编辑器 -> 文件类型 -> `ignore Files and Folders` 填写
-- 关闭顶行注释         编辑器 -> 代码风格 -> Java -> 代码生成 -> 取消行注释在第一列
+- 提示不区分大小写，   编辑器 -> 常规 -> 代码完成 -> 取消匹配大小写的勾
+- 隐藏不想看到的文件   编辑器 -> 文件类型 -> 切换忽略的文件和文件夹 填写 *.iml HELP.md mvnw mvnw.cmd
+- 关闭顶行注释         编辑器 -> 代码样式 -> Java -> 代码生成 -> 取消行注释在第一列勾
 - 禁用掉不常用的插件
-- 修改编码: 编辑器 -> 文件编码 -> 把GBK全部设置为UTF-8
+- 修改编码: 编辑器 -> 文件编码 -> 把GBK全部设置为UTF-8, 并将属性文件默认编码设置为UTF-8并勾选Ascii
+- 修改文件模板:  Preferences | 编辑器 | 文件和代码模板|Class
 
 ```java
-/**
- * ${DESCRIPTION}
- *
- * @author Xiang Zheng
- */
+#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME};#end
+#parse("File Header.java")
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class ${NAME} {
+
+    Logger log = LoggerFactory.getLogger(${NAME}.class);
+}
+
 ```
 
 

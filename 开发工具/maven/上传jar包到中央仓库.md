@@ -17,7 +17,7 @@
 
 ## 验证域名或仓库
 - 根据要求创建对应的github仓库
-- 或者验证域名
+- 或者验证域名创建TXT记录 例如主机名： ossrh-75952 记录 ： https://issues.sonatype.org/browse/OSSRH-75952
 
 ## 配置maven settings.xml
 ```xml
@@ -68,7 +68,7 @@ dependencies标签下增加
 <!-- 开发者信息 -->
 <developers>
     <developer>
-        <name>zhengxiang</name>
+        <name>Xiang Zheng</name>
         <email>zxyful@gmail.com</email>
         <url>https://github.com/zxyle</url>
     </developer>
@@ -101,6 +101,9 @@ dependencies标签下增加
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
                     <version>2.9.1</version>
+                    <configuration>
+                        <source>8</source>
+                    </configuration>
                     <executions>
                         <execution>
                             <id>attach-javadocs</id>
@@ -145,14 +148,14 @@ dependencies标签下增加
 
 ## 上传
 ```
-mvn clean deploy -P sonatype-oss-release
+mvn clean deploy -P sonatype-oss-release -Dmaven.test.skip=true
 ```
 
 ## 发布
 - 打开 https://s01.oss.sonatype.org/
 - 使用上述账号密码登录
 - 点击左侧 **Staging Repositories**
-- 选择点击 **Clone**
+- 选择点击 **Close**
 - 稍后 再次点击**Release**
 - 如果上传错误，就点击**Drop**，然后重新上传
 

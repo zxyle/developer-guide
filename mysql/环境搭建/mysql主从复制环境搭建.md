@@ -43,3 +43,16 @@ start slave;
 # 关闭从库同步
 stop slave;
 ```
+
+
+
+## binlog开启
+
+注意一点是MySQL8.x默认开启binlog
+
+```sql
+SHOW VARIABLES LIKE '%bin%';
+```
+
+![image-20211019232359702](../../resource/images/image-20211019232359702.png)
+

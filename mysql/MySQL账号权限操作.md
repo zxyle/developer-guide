@@ -1,0 +1,113 @@
+## 账号操作
+
+```sql
+-- 查看用户列表
+select user, host from mysql.user;
+
+-- 创建账号
+create user 'username'@'%' identified by 'password';
+
+-- 删除账号
+drop user 'zheng'@'%';
+
+-- 修改密码(2种方法)
+ALTER USER 'root'@'localhost' IDENTIFIED BY '12345678';
+set password for 'root'@'localhost' = '12345678';
+
+# 修改账号Host
+UPDATE mysql.user SET host = '%' WHERE user = 'root';
+```
+
+
+
+## 密码操作
+
+```sql
+#修改密码安全策略为低（只校验密码长度，至少8位）。
+set global validate_password_policy=0;  
+
+# 明文转密文
+select password('test1111111');
+
+# 补充忘记密码？
+```
+
+
+
+## 权限有关
+
+### 查看用户权限
+
+```sql
+SHOW GRANTS FOR root@localhost;
+```
+
+
+
+### 赋予权限
+
+```sql
+GRANT ALL ON *.* TO 'super'@'localhost' WITH GRANT OPTION;
+```
+
+- ALL： 代表所有权限，其他权限参考下表
+- `ON *.*`：所有数据库和所有对象， 如果针对指定数据库 `ON demo.*`
+- `TO 'super'@'localhost'`：授予的用户, 如果该用户不存在，则会创建
+- `WITH GRANT OPTION`: 允许该用户向其他用户授予权限
+
+
+
+### 刷新权限
+
+```sql
+flush privileges;
+```
+
+
+
+### 回收权限
+
+```sql
+revoke [权限列表] on *.*  from 'root'@'localhost';
+```
+
+- 【权限列表】使用逗号隔开
+- `on *.*` 目标对象
+
+## 权限列表
+
+参考文章: https://www.yiibai.com/mysql/grant.html
+
+| 权限                    | 说明                                                         |      |
+| ----------------------- | ------------------------------------------------------------ | ---- |
+| ALL[PRIVILEGES]         | 授予除了`GRANT OPTION`之外的指定访问级别的所有权限           |      |
+| SELECT                  |                                                              |      |
+| INSERT                  |                                                              |      |
+| UPDATE                  |                                                              |      |
+| DELETE                  |                                                              |      |
+| DROP                    |                                                              |      |
+| ALTER                   |                                                              |      |
+| CREATE ROUTINE          |                                                              |      |
+| ALTER ROUTINE           |                                                              |      |
+| CREATE                  | 允许用户创建数据库和表                                       |      |
+| CREATE USER             | 允许用户使用`CREATE USER`，`DROP USER`，`RENAME USER`和`REVOKE ALL PRIVILEGES`语句。 |      |
+| CREATE VIEW             |                                                              |      |
+| SHOW VIEW               |                                                              |      |
+| CREATE TEMPORARY TABLES |                                                              |      |
+| REPLICATION SLAVE       |                                                              |      |
+| REPLICATION CLIENT      |                                                              |      |
+| SUPER                   |                                                              |      |
+| USAGE                   | 相当于“无权限”                                               |      |
+| RELOAD                  |                                                              |      |
+| SHUTDOWN                |                                                              |      |
+| PROCESS                 |                                                              |      |
+| FILE                    |                                                              |      |
+| REFERENCES              |                                                              |      |
+| INDEX                   |                                                              |      |
+| SHOW DATABASES          |                                                              |      |
+| LOCK TABLES             |                                                              |      |
+| EXECUTE                 |                                                              |      |
+| EVENT                   |                                                              |      |
+| TRIGGER                 |                                                              |      |
+| CREATE TABLESPACE       |                                                              |      |
+| Grant OPTION            |                                                              |      |

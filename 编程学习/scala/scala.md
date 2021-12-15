@@ -1,7 +1,7 @@
 ## 介绍
 scale language
 
-原理: scalav -> 字节码 -> JVM
+原理: scala -> 字节码 -> JVM
 
 https://www.scala-lang.org/
 

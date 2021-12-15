@@ -31,7 +31,7 @@ drop database mydb2;
 -- 显示所有表
 show tables;
 
--- 创建表
+-- 创建表(内部表)
 create table t1(id int, name string);
 
 -- 显示创建表
@@ -64,6 +64,8 @@ fields terminated by '\t'
 lines terminated by '\n';
 
 
+## 丢弃表
+TRUNCATE TABLE my_table;
 ```
 
 
@@ -119,3 +121,20 @@ insert into table dws_qdsjzx_ptdsjpt_yqyd_indexes_dt
 VAlues(2712,0,0,0,0,0,0,0,0,0,0,50)
 ```
 
+
+
+## 查询并插入
+
+```sql
+INSERT OVERWRITE TABLE target 
+SELECT col1, col2
+  FROM source;
+```
+
+
+
+## 排序
+
+SORT BY 
+
+ORDER BY

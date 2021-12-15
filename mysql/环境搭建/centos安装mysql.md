@@ -16,6 +16,9 @@
 ## 安装
 
 ```bash
+# 如果已安装mariadb，需要卸载
+rpm -e mariadb-libs --nodeps
+
 # 依次安装下面6个rpm包 client-plugins -> common -> libs -> libs-compat -> client -> server
 mysql-community-client-plugins
 mysql-community-common
@@ -31,29 +34,25 @@ rpm -ivh mysql-community-libs-8.0.27-1.el7.x86_64.rpm --force --nodeps
 rpm -ivh mysql-community-libs-compat-8.0.27-1.el7.x86_64.rpm --force --nodeps
 rpm -ivh mysql-community-client-8.0.27-1.el7.x86_64.rpm --force --nodeps
 rpm -ivh mysql-community-server-8.0.27-1.el7.x86_64.rpm --force --nodeps
+
+# 也可以在线安装
+yum install -y https://mirrors.aliyun.com/mysql/MySQL-5.7/mysql-community-common-5.7.35-1.el7.x86_64.rpm
+yum install -y https://mirrors.aliyun.com/mysql/MySQL-5.7/mysql-community-libs-5.7.35-1.el7.x86_64.rpm
+yum install -y https://mirrors.aliyun.com/mysql/MySQL-5.7/mysql-community-libs-compat-5.7.35-1.el7.x86_64.rpm
+yum install -y https://mirrors.aliyun.com/mysql/MySQL-5.7/mysql-community-client-5.7.35-1.el7.x86_64.rpm
+yum install -y https://mirrors.aliyun.com/mysql/MySQL-5.7/mysql-community-server-5.7.35-1.el7.x86_64.rpm
+
+# 运行以下命令查看MySQL版本号。
+mysql -V
 ```
-
-
-
-## 安装包介绍
-
-- common
-- libs
-- libs-compat
-- client
-- client-plugins
-- server
-- devel
-- embedded-compat
-- test
 
 
 
 ## 服务启停
 
 ```bash
-# 启动服务, 关闭服务就是`service mysqld stop`
-service mysqld start
+# 执行以下命令，启动 MySQL 数据库。
+systemctl start mysqld.service
 ```
 
 
@@ -62,7 +61,7 @@ service mysqld start
 
 ```bash
 # 查看临时密码
-[root@localhost log]# cat /var/log/mysqld.log 
+grep "password" /var/log/mysqld.log
 
 # 登录临时root用户, 使用上面临时密码
 [root@localhost log]# mysql -u root -p
@@ -76,7 +75,7 @@ use mysql;
 # 修改root账号方便其他Host访问
 UPDATE mysql.user SET host = '%' WHERE user = 'root';
 
-# 赋予权限
+# 赋予所有权限
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';
 
 # 刷新权限
@@ -89,15 +88,6 @@ quit;
 > 远程访问需要防火墙开放3306端口
 
 
-
-## binlog开启
-
-注意一点是MySQL8.x默认开启binlog
-
-```sql
-SHOW VARIABLES LIKE '%bin%';
-```
-![image-20211019232359702](../../resource/images/image-20211019232359702.png)
 
 ## 配置文件地址
 - /etc/my.cnf
@@ -122,7 +112,7 @@ rpm -e mysql-community-common-5.7.31-1.el6.x86_64.rpm
 # 删除文件
 rm -rf /etc/my.cnf
 rm -rf /etc/my.cnf.d
-rm -rf  /var/lib/mysql
-rm -rf  /var/log/mysqld.log
-rm -rf  /var/run/mysqld/mysqld.pid
+rm -rf /var/lib/mysql
+rm -rf /var/log/mysqld.log
+rm -rf /var/run/mysqld/mysqld.pid
 ```

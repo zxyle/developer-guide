@@ -39,8 +39,6 @@ git branch -r
 
 
 
-
-
 ## 合并操作
 
 ```bash
@@ -49,26 +47,11 @@ git merge --no-ff branch-name
 
 
 
-
-
-
-
 ## 切换远程分支
 
 ```bash
 git checkout -b 本地分支名 origin/远程分支名
 ```
-
-
-
-## 删除远程仓库分支
-
-```bash
-git tag -d v0.0.1
-git push origin :refs/tags/v0.0.1
-```
-
-
 
 ## 分支
 

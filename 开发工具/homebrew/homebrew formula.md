@@ -23,6 +23,10 @@ brew create --python https://zxyle-homebrew.oss-cn-hangzhou.aliyuncs.com/tarball
 
 
 
+> rb文件不能有超过2行以上的空行
+
+
+
 ## 安装Formula
 
 ```

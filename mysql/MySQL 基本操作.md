@@ -146,28 +146,6 @@ SHOW CREATE VIEW view_name;
 
 
 
-## 账号操作
-
-```sql
--- 创建账号
-create user 'username'@'%' identified  by 'password';
-
--- 删除账号
-drop user 'zheng'@'%';
-
--- 修改密码
-
-```
-
-
-
-## 权限有关
---为该用户添加查询、主从复制等权限 grant select,replication slave,replication client,super on *.* to 'canal'@'%';
-
-- 赋予权限: ``
-- 刷新权限: `flush privileges;`
-- 回收权限: ``
-
 ## insert
 ```sql
 insert into table_name(field1, field2) values (v1, v2);

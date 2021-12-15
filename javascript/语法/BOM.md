@@ -1,3 +1,7 @@
+## 介绍
+
+浏览器对象模型(BrowserObjectModel)
+
 ## window
 
 当前浏览器窗口

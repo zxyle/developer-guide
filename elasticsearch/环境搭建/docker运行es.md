@@ -1,7 +1,7 @@
 ## docker compose
 ```
 # elasticsearch.yml
-http.host:0.0.0.0
+http.host: 0.0.0.0
 ```
 
 ```yaml

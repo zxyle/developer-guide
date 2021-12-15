@@ -138,3 +138,7 @@ bin/schematool -dbType mysql -initSchema
 ./bin/hiveserver2
 ```
 
+
+
+## 配置信息介绍
+
