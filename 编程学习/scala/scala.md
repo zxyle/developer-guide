@@ -10,7 +10,7 @@ https://www.scala-lang.org/
 
 ## 环境搭建 & 基本使用
 - mac `brew install scala`
-- 下载[安装包](https://downloads.lightbend.com/scala/2.11.12/scala-2.11.12.msi)
+- 下载[安装包](https://downloads.lightbend.com/scala/2.11.12/scala-2.11.12.msi)1
 - 双击 下一步到底
 - 使用命令检查 `scala -version`
 - IDEA 安装scala插件

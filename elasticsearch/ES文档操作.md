@@ -2,9 +2,11 @@
 文档相当于mysql的一条记录
 
 
+
 ## 1. 插入文档(指定ID)
+
 ```
-PUT /{index}/_doc/{id}
+PUT /索引名/_doc/{id}
 {
     "first_name" : "John",
     "last_name" :  "Smith",
@@ -47,7 +49,7 @@ PUT /{index}/_doc/{id}
 ## 2. 插入文档(随机id/不指定ID)
 
 ```
-POST /{index}/_doc
+POST /索引名/_doc
 {
     "name": "zheng",
     "age": 27,
@@ -58,20 +60,20 @@ POST /{index}/_doc
 注意:
 - 会自动生成一个id, id 在`_id`属性里
 - 如果不带id，多次POST操作, 全是新增操作
-- 如果带id，再次POST是更新操作(TODO? 是全量还是局部更新)
+- 如果带id，再次POST是更新操作(全部替换)
 
 响应信息:
 ```json
 {
-    "_index": "test",
-    "_type": "_doc",
-    "_id": "Zvm98HkBIk1ld9uKSDnS",
-    "_version": 1,
-    "result": "created",
-    "_shards": {
-        "total": 2,
-        "successful": 1,
-        "failed": 0
+    "_index": "test",  # 索引
+    "_type": "_doc",   # 类型 - 文档
+    "_id": "Zvm98HkBIk1ld9uKSDnS",  # 随机生成 唯一标识
+    "_version": 1,  # 版本
+    "result": "created",  # 结果， 创建成功
+    "_shards": {  # 分片
+        "total": 2,  # 分片 - 总数
+        "successful": 1,  # 分片 - 成功
+        "failed": 0   # 分片 - 失败
     },
     "_seq_no": 8,
     "_primary_term": 1
@@ -92,13 +94,33 @@ POST /{index}/_doc
 
 ## 更新文档POST(带ID)
 
-- 重新PUT(注意_version的变化)
+- 重新POST(注意_version的变化)
 - POST `/{index}/_doc/{id}/_update`  { "doc": {} } 会对比原来的数据, 没更新就不更新
 - POST 不带`_update` 不会检查原数据，一直都是更新操作 body 不带doc 属性
 
 
 
+## 局部更新
+
+只更新部分字段
+
+```
+POST /索引名/_update/ID
+
+{
+	"doc": {
+		// 文档
+	}
+}
+```
+
+
+
+
+
 ## 删除文档(指定ID)
+
+不会立即被删除，只是标记成逻辑删除
 
 ```
 DELETE /{index}/_doc/{id}
@@ -111,7 +133,7 @@ DELETE /{index}/_doc/{id}
     "_type": "_doc",
     "_id": "X_l88HkBIk1ld9uK1jlU",
     "_version": 2,
-    "result": "deleted",
+    "result": "deleted",  # 标记为删除
     "_shards": {
         "total": 2,
         "successful": 1,
@@ -126,7 +148,7 @@ DELETE /{index}/_doc/{id}
 
 ## 查询并删除
 
-POST /{index}/_delete_by_query
+POST /索引名/_delete_by_query
 
 ```json
 {

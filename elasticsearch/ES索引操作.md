@@ -2,6 +2,9 @@
 ES的索引可以理解为mysql的数据库
 
 ## 1. 创建索引
+
+> 类似mysql: CREATE DATABASE xxx
+
 ```
 PUT /索引名
 ```
@@ -16,6 +19,9 @@ PUT /索引名
 ```
 
 ## 2. 查看索引信息
+
+> 类似mysql： SHOW CREATE DATABASE xxx
+
 ```
 GET /索引名
 ```
@@ -24,18 +30,18 @@ GET /索引名
 ```json
 {
     "索引名": {
-        "aliases": {},
-        "mappings": {},
-        "settings": {
-            "index": {
-                "creation_date": "1623239329897",
-                "number_of_shards": "1",
-                "number_of_replicas": "1",
-                "uuid": "-90ySoL4SReG3HV6OsZsCQ",
-                "version": {
+        "aliases": {}, # 别名
+        "mappings": {}, # 映射
+        "settings": {   # 设置
+            "index": {  # 设置 - 索引
+                "creation_date": "1623239329897",  # 索引创建时间
+                "number_of_shards": "1",   # 主分片数量
+                "number_of_replicas": "1",  # 副分片数量
+                "uuid": "-90ySoL4SReG3HV6OsZsCQ",  # 索引唯一标识
+                "version": {  # 索引版本
                     "created": "7080099"
                 },
-                "provided_name": "goubi"
+                "provided_name": "shopping"  # 索引名称
             }
         }
     }
@@ -60,6 +66,9 @@ DELETE /索引名
 ```
 
 ## 4. 查看所有索引
+
+> SHOW DATABASES;
+
 ```
 GET /_cat/indices?v
 ```
@@ -79,19 +88,21 @@ yellow open   shopping nxDf3j11RemGO5CGeIcbvw   1   1         11            0   
 字段含义:
 | 序号 | 字段           | 含义     | 备注 | 示例 |
 | ---- | -------------- | -------- | ---- | ---- |
-| 1    | health         |          |      |      |
-| 2    | status         |          |      |      |
+| 1    | health         | 当前服务器健康状态： green(集群完整) yellow(单点正常、集群不完整) red(单点不正常) |      |      |
+| 2    | status         | 索引打开、关闭状态 |      |      |
 | 3    | index          | 索引名称  |      |      |
-| 4    | uuid           |          |      |      |
-| 5    | pri            |          |      |      |
-| 6    | rep            |          |      |      |
-| 7    | docs.count     |          |      |      |
-| 8    | docs.deleted   |          |      |      |
-| 9    | store.size     |          |      |      |
-| 10   | pri.store.size |          |      |      |
+| 4    | uuid           | 索引统一编号 |      |      |
+| 5    | pri            | 主分片数量 |      |      |
+| 6    | rep            | 副本数量 |      |      |
+| 7    | docs.count     | 可用文档数量 |      |      |
+| 8    | docs.deleted   | 文档删除状态（逻辑删除） |      |      |
+| 9    | store.size     | 主分片和副分片整体占空间大小 |      |      |
+| 10   | pri.store.size | 主分片占空间大小 |      |      |
+
 
 
 ## 查看索引设置信息
+
 ```
 GET /index/_settings
 ```

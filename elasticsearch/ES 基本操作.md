@@ -1,6 +1,6 @@
 ## 简单查询(带ID)
 ```
-GET /{index}/_doc/{id}
+GET /索引名/_doc/{id}
 ```
 
 返回含义:
@@ -10,8 +10,8 @@ GET /{index}/_doc/{id}
 - `_version`      版本号
 - `_seq_no`       并发控制字段， 每次更新就会+1， 用来做乐观锁
 - `_primary_term` 同上，主分片重新分配，如重启就会变化
-- `_found`         布尔值
-- `_source`  真正的内容
+- `_found`         布尔值 查询是否成功
+- `_source`  查询结果
 
 
 
