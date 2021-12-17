@@ -37,6 +37,7 @@ curl http://127.0.0.1:9200/
 # 设置外网访问
 echo "http.host: 0.0.0.0" >> /etc/elasticsearch/elasticsearch.yml
 
+# 重启服务
 systemctl restart elasticsearch
 ```
 

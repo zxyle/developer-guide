@@ -4,7 +4,7 @@
 
 ## 下载 & 安装
 
-[下载地址](https://mirrors.cloud.tencent.com/gitlab-ce/yum/el7/gitlab-ce-12.10.9-ce.0.el7.x86_64.rpm)
+[镜像下载地址](https://mirrors.cloud.tencent.com/gitlab-ce/yum/el7/)
 
 
 

@@ -1,6 +1,6 @@
 ## 介绍
 
-用于构建用户界面的JavaScript库， Facebook开源, https://reactjs.org/, 面向组件编程
+用于构建用户界面的JavaScript库， Facebook开源, https://zh-hans.reactjs.org/, 面向组件编程
 
 
 
@@ -29,10 +29,8 @@
 
 ## 创建虚拟DOM方法
 
-- React.createElement()
-- JSX
-
-
+- `React.createElement('h1', null, 'Hello React!')`
+- JSX语法
 
 
 
@@ -45,13 +43,13 @@
 
 ### 函数式组件
 
-- 组件名为函数名，需要使用大写开头
+- 组件名为函数名，需要以大写字母开头
 - 需要返回值，返回JSX
 - 使用的时候 `<Hello />`
 
 ```jsx
-function Hello() {
-    return <h1>Hello World</h1>
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
 }
 ```
 
@@ -70,18 +68,100 @@ class Hello extends React.Component {
 }
 ```
 
+- 不是匿名函数 就需要在构造器里绑定 `this.handleChange = this.handleChange.bind(this);`
+
+## 状态管理
+
+看是否包含状态（state）来确定是否为复杂组件。state是一个o
+
+### 状态初始化
+
+```jsx
+// 构造器里
+constructor() {
+    super();
+    this.state = {
+    	count: 0
+	}    
+}
+            
+// 初始化state语法（ 简化版 ）
+state = {
+  count: 0
+}
+```
 
 
-## 复杂组件
-
-看是否包含状态（state）
 
 
 
+### 状态读取
+
+```jsx
+this.state.count
+```
 
 
-## 状态
 
-- 状态初始化
-- 状态读取
-- 状态修改
+### 状态修改
+
+- 是合并操作，不是更新操作
+
+```jsx
+// 错误的
+this.state.comment = 'Hello';
+
+// 正确的
+this.setState({
+    count: this.state.count - 1
+})
+```
+
+
+
+### useState
+
+```jsx
+import React, { useState } from 'react'
+
+// 括号里为初始值
+const [ count, setCount ] = useState(0)
+```
+
+
+
+
+
+## props
+
+- 传递组件属性
+- 传递
+- 传递子组件
+- props校验
+- props是只读的
+
+
+
+## ref
+
+React里获取DOM里的信息
+
+- string ref 效率问题，不推荐使用
+- 回调形式ref  `<input ref="{c => this.input1 = c}">`
+
+
+
+## 事件处理
+
+- onClick
+- onSubmit
+- onChange
+
+## 生命周期方法
+
+- componentDidMount 组件挂载
+- componentWillUnmount 组件卸载
+
+
+
+类组件加载顺序： constructor -> render -> componentDidMount -> componentWillUnmount

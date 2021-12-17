@@ -44,7 +44,6 @@ create.sh
 echo -n "Enter repo name:"
 read name
 
-
 if [ ! -d ${name}.git ]
 then
   mkdir ${name}.git

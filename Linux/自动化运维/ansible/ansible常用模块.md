@@ -6,8 +6,8 @@
 
 ## command模块
 
-作用:  不开启shell解释器，直接通过ssh执行命令，不支持bash的一些特性，如重定向等
-默认调用command模块
+作用:  不开启shell解释器，直接通过ssh执行命令，不支持bash的一些特性，如重定向等。
+ansible 默认调用command模块
 
 
 

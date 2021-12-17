@@ -1,6 +1,6 @@
 ## 登录与退出
 
-```
+```bash
 # 登录
 mysql -uroot -p
 
@@ -50,7 +50,7 @@ USE db_name;
 SHOW TABLES;
 
 -- 创建表
-CREATE TABLE `USER` (
+CREATE TABLE `tbl_name` (
   `user_id` int(128) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
   `age` int(11) DEFAULT NULL,
@@ -69,6 +69,9 @@ CREATE TABLE new_name LIKE old_name;
 
 -- 修改表名
 RENAME TABLE table_name_a TO table_name_b;
+
+-- 清空表
+TRUNCATE [TABLE] tbl_name 
 ```
 
 
@@ -141,6 +144,7 @@ FROM tb1, tb2 WHERE tb1.col1=tb2.col1;
 -- 删除视图
 DROP VIEW IF EXISTS view_name;
 
+-- 显示创建时视图语句
 SHOW CREATE VIEW view_name;
 ```
 
@@ -211,8 +215,4 @@ order by field asc/desc;
 ## BETWEEN AND
 
 ## LIKE
-
-
-
-## truncate
 

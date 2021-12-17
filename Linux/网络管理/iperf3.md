@@ -1,6 +1,6 @@
 ## 介绍
 
-TCP、UDP 和 SCTP 的终极速度测试工具
+TCP、UDP 和 SCTP 速度测试工具
 
 
 
