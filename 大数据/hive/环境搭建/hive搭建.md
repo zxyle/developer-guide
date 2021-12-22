@@ -29,7 +29,7 @@ source /etc/profile
 ## jar包调整
 
 ```bash
-# 将mysql驱动复制到lib目录下载
+# 将mysql驱动复制到lib目录下
 
 # jar包改名，不然会日志冲突
 mv log4j-slf4j-impl-2.10.0.jar log4j-slf4j-impl-2.10.0.jar.bak

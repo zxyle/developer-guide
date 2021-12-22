@@ -25,6 +25,7 @@
 ## 配置
 
 - 自动保存 设置 -> Auto Save -> onFocusChange
+- 设置目录树缩进像素， 搜索tree:indent ，设置为16
 
 
 

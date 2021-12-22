@@ -30,6 +30,9 @@ Options -> Choose Language -> Chinese
 
 右键TestPlan -> 添加 -> 线程（用户）-> 线程组
 
+- 线程数
+- Ramp-Up时间， 多长时间达到线程数 
+
 
 
 ### 设置请求
@@ -50,7 +53,7 @@ Options -> Choose Language -> Chinese
 
 ### 设置监听器
 
-右键HTTP请求 -> 添加 -> 监听器 -> 察看结果树
+右键HTTP请求 -> 添加 -> 监听器 -> 察看结果树、汇总报告、聚合报告、汇总图
 
 
 

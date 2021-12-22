@@ -32,5 +32,11 @@ https://almalinux.org/zh-hans/
 
 
 
+### 5. Oracle Linux
+
+https://www.oracle.com/linux/
+
+
+
 ## 命令
 

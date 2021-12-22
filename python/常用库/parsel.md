@@ -4,6 +4,16 @@
 
 
 
+## 安装
+
+```bash
+pip install parsel
+```
+
+
+
+
+
 ## 使用
 
 ```python
