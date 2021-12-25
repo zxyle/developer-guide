@@ -30,7 +30,7 @@
 ## 创建虚拟DOM方法
 
 - `React.createElement('h1', null, 'Hello React!')`
-- JSX语法
+- JSX语法 (本质还是前者)
 
 
 
@@ -51,7 +51,12 @@
 function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
+
+export default Welcome;
 ```
+
+- 传递参数给组件  `<Welcome name="zheng" />`
+- 使用传入属性 `props.属性名`
 
 
 
@@ -61,14 +66,19 @@ function Welcome(props) {
 - 需要重写render方法，返回JSX
 
 ```jsx
+import React from 'react';
+
 class Hello extends React.Component {
     render() {
         return <p>Hello</p>
     }
 }
+
+export default Hello;
 ```
 
 - 不是匿名函数 就需要在构造器里绑定 `this.handleChange = this.handleChange.bind(this);`
+- 使用传入属性 `this.props.属性名`
 
 ## 状态管理
 

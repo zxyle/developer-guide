@@ -126,6 +126,8 @@ session.commit()
 session.rollback()
 
 session.close()
+
+session.remove()
 ```
 
 

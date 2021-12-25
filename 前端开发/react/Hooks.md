@@ -19,7 +19,7 @@ React.createRef()
 函数组件 内部状态管理
 
 ```jsx
-// count初始值为0， 通过setCount来修改
+// count初始值为0，通过setCount来修改
 const [count, setCount] = useState(0);
 ```
 
