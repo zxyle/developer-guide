@@ -171,48 +171,24 @@ DELETE FROM table_name [WHERE Clause]
 
 
 
-## select
-
-```
-select * from table_name;
-```
-
-
-
-## where
-
-```
-
-```
-
-
-
-## 分组查询 group by
+## 线程操作
 
 ```sql
-SELECT address, AVG(age) AS "平均年龄", COUNT(*) as "人数" FROM students GROUP BY students.address;
+-- 查看所有线程
+show [full] processlist;
+
+-- 杀死线程
+kill 线程ID
 ```
 
-## having
-```
-```
-
-## 排序 order by
-```
-order by field asc/desc;
-```
-
-## left join
-
-## right join
-
-## join
-
-## limit
-
-## IN / NOT IN
-
-## BETWEEN AND
-
-## LIKE
+| 参数    | 说明                                                         |      |
+| ------- | ------------------------------------------------------------ | ---- |
+| Id      | 连接ID                                                       |      |
+| User    | 建立此连接所使用的用户名                                     |      |
+| Host    | 建立此连接的机器的IP与端口                                   |      |
+| db      | 此连接所访问的数据库名称                                     |      |
+| Command | Query：当前连接正在执行SQL语句。 Sleep：当前连接正处于空闲状态。 |      |
+| Time    | 连接处于当前状态持续的时间。当COMMAND为Query时，代表此连接上正在执行的SQL已经执行的时间。当COMMAND为Sleep时，代表此连接空闲的时间。 |      |
+| State   | 目前无意义，恒为空值。                                       |      |
+| Info    | 当COMMAND为Query时，为此连接上正在执行的SQL的内容。当COMMAND为Sleep时，为空值，无意义。 |      |
 

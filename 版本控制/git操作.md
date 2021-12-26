@@ -31,13 +31,13 @@ git config --global core.quotepath false
 git remote -v
 
 # 增加远程仓库（仓库名默认为origin）
-git remote add 仓库名 git@gitlab.com:xxx/yyy.git
+git remote add 仓库名 git@gitlab.com:username/repo.git
 
 # 移除远程仓库
 git remote remove 仓库名
 
 # 修改仓库地址
-git remote set-url origin git@gitlab.com:xxx/yyy.git
+git remote set-url origin git@gitlab.com:username/repo.git
 ```
 
 
