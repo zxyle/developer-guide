@@ -18,6 +18,8 @@
 
 ## linux 安装jdk
 
+https://open-pkg.oss-cn-hangzhou.aliyuncs.com/jdk-8u202-linux-x64.tar.gz
+
 ### step1: 解压到指定目录
 ```shell
 [root@localhost ~]# tar -zxvf jdk-8u202-linux-x64.tar.gz -C /opt

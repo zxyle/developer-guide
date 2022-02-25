@@ -16,6 +16,9 @@
 ## 安装
 
 ```bash
+# 安装依赖
+yum install libaio* -y
+
 # 如果已安装mariadb，需要卸载
 rpm -e mariadb-libs --nodeps
 

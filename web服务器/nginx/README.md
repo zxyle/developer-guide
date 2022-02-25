@@ -6,10 +6,14 @@
 
 ```bash
 # 安装nginx
+yum install epel-release -y
 yum install nginx -y
 
 # 启动并设置开机自启
 systemctl enable nginx --now
+
+# 查看安装状态
+systemctl status nginx
 ```
 
 

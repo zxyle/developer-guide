@@ -7,4 +7,6 @@
 - everything
 - [cmder](https://cmder.net/)
 - [ldapadmin](http://www.ldapadmin.org/download/ldapadmin.html) LDAP可视化工具
+- [HashCheck](https://github.com/gurnec/HashCheck/releases)
+
 
