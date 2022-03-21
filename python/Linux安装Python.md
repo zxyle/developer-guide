@@ -19,6 +19,12 @@ yum install python3
 - [官网下载](https://www.python.org/downloads/)
 - [官网历史版本](https://www.python.org/ftp/python/)
 
+```
+wget https://registry.npmmirror.com/-/binary/python/3.7.4/Python-3.7.4.tgz
+```
+
+
+
 ### step2: 依赖库安装
 ```bash
 yum install -y zlib zlib-devel bzip2-devel \

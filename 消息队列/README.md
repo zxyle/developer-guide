@@ -4,4 +4,13 @@
 
 - 解耦
 - 削峰填谷
-- 异步
+- 异步处理
+
+
+
+## MQ对比
+
+- ActiveMQ
+- Kafka
+- RocketMQ
+- RabbitMQ
