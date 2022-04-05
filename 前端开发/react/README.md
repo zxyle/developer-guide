@@ -45,14 +45,17 @@
 
 - 组件名为函数名，需要以大写字母开头
 - 需要返回值，返回JSX
-- 使用的时候 `<Hello />`
+- 使用的时候 `<Welcome />`
 
 ```jsx
+import React from 'react';
+
 function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
 
 export default Welcome;
+
 ```
 
 - 传递参数给组件  `<Welcome name="zheng" />`

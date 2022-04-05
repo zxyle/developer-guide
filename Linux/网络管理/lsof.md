@@ -5,7 +5,7 @@
 ## 安装
 
 ```
-yum install lsof
+yum install lsof -y
 ```
 
 

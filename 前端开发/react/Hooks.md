@@ -16,7 +16,7 @@ React.createRef()
 
 ## useState
 
-函数组件 内部状态管理
+函数式组件 内部状态管理
 
 ```jsx
 // count初始值为0，通过setCount来修改

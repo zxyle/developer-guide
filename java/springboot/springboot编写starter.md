@@ -1,11 +1,13 @@
 
 
-## stater是什么
+## stater是什么?
 场景启动器
 
 
 
 ## 编写步骤
+
+- 创建 xxx-spring-boot-starter maven工程
 
 - 引入jar包
 - 编写`AutoConfiguration` 配置类

@@ -19,7 +19,7 @@ npm install -g yarn
 yarn init
 ```
 
-## 安装包(相当于npm install)
+## 安装依赖(相当于npm install)
 ```bash
 yarn 
 ```
@@ -29,7 +29,7 @@ yarn
 yarn start
 ```
 
-## 添加包
+## 添加依赖
 ```bash
 yarn add xxx
 ```
