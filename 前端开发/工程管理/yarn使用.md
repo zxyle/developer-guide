@@ -11,30 +11,56 @@ npm install -g yarn
 
 
 
-
-
 ## 初始化项目(相当于npm init)
 
 ```bash
 yarn init
 ```
 
+
+
 ## 安装依赖(相当于npm install)
+
 ```bash
-yarn 
+yarn 或 yarn install
 ```
 
+
+
 ## 启动服务
+
 ```bash
 yarn start
 ```
 
+
+
 ## 添加依赖
+
 ```bash
-yarn add xxx
+yarn add 包名
 ```
 
+
+
+## 编译打包
+
+```bash
+yarn build
+```
+
+
+
+## 测试
+
+```bash
+yarn test
+```
+
+
+
 ## 下载源管理
+
 ```bash
 // 查看当前源
 yarn config get registry
@@ -44,7 +70,10 @@ yarn config get registry
 yarn config set registry http://registry.npm.taobao.org
 ```
 
+
+
 ## 清空缓存
+
 ```bash
 yarn cache clean
 ```

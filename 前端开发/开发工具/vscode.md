@@ -1,4 +1,4 @@
-## 插件
+## 常用插件
 
 - chinese
 - auto rename tag

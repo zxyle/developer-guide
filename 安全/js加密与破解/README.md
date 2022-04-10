@@ -12,9 +12,11 @@ http://dean.edwards.name/packer/
 
 js开头处包含`(p, a, c, k, e, r)`
 
-破解方法: 将代码去掉前面的eval， 复制到浏览器console, 并回车， https://www.cnblogs.com/52cik/p/js-unpacker.html
+破解方法:  将代码去掉前面的eval， 复制到浏览器console, 并回车， 
 
-http://matthewfl.com/unPacker.html
+参考文章： https://www.cnblogs.com/52cik/p/js-unpacker.html
+
+解密网站： http://matthewfl.com/unPacker.html
 
 
 

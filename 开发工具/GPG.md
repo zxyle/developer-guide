@@ -1,4 +1,5 @@
 **配置GPG**
+
 - macos gpg 下载 https://gpgtools.org/
 - Windows 下载 https://www.gpg4win.org/
 
@@ -15,6 +16,8 @@
 
 
 ## 进入邮箱， 点击验证链接
+
+
 
 ## git提交配置
 

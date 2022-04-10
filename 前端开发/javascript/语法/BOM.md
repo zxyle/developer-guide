@@ -12,8 +12,6 @@
 | confirm | 对话框，返回布尔值 | `confirm("是否开始？");`        |
 | prompt  | 输入框             | `prompt("请输入性别: ", "男");` |
 
-
-
 - setInterval
 - clearInterval
 - console
