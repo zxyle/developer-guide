@@ -2,6 +2,8 @@
 
 *文档对象模型*（Document Object Model，简称*DOM*）, 是BOM下window的对象
 
+
+
 ## document
 
 ```javascript
@@ -17,6 +19,8 @@ document.getElementById('');
 - getElementsByTagNameNS('')
 - querySelector("#app")
 - createElement()
+
+
 
 ## 事件
 

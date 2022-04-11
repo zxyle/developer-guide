@@ -2,6 +2,8 @@
 
 浏览器对象模型(Browser Object Model)
 
+
+
 ## window
 
 当前浏览器窗口
@@ -15,6 +17,8 @@
 - setInterval
 - clearInterval
 - console
+
+
 
 ## navigator
 
