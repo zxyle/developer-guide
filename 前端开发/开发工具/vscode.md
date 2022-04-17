@@ -25,10 +25,19 @@
 ## 配置
 
 - 自动保存 设置 -> Auto Save -> onFocusChange
-- 设置目录树缩进像素， 搜索tree:indent ，设置为16
+- 设置目录树缩进像素， 搜索tree:indent ，设置为20
 
 
 
 ## vscode打开项目命令行
 
 我们在mac的终端可以使用 open .打开文件夹 如果我们想用vs-code打开文件夹,用的命令是 code .,不过你得先按照code 安装code：打开VSCode –> command+shift+p –> 输入shell command –> 点击提示Shell Command: Install ‘code’ command in PATH运行 使用：打开终端，cd到要用VSCode打开的文件夹，然后输入命令code .即可打开
+
+
+
+## 代码格式化
+
+- 安装prettier
+- 设置 - 搜索editor.defaultFormatter  - 选择prettier
+- 设置 - 搜索editor.formatOnSave - 勾选
+

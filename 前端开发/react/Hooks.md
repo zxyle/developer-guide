@@ -1,5 +1,3 @@
-
-
 ## useRef
 
 可以存储、查找组件内的标签或任意其他数据
@@ -21,11 +19,17 @@ React.createRef()
 ```jsx
 import {useState} from "react";
 
-// count初始值为0，通过setCount来修改
-const [count, setCount] = useState(0);
+function App () {
+  // count初始值为0，通过setCount来修改
+  const [ count, setCount ] = useState(0)
+  return (
+    <div>
+      点击次数: { count } 
+      <button onClick={() => { setCount(count + 1)}}>点我</button>
+    </div>
+  )
+}
 
-// 修改状态
-setCount(100);
 ```
 
 
@@ -33,6 +37,8 @@ setCount(100);
 
 
 ## useEffect
+
+函数组件中执行副作用操作(除了状态相关的逻辑，比如网络请求，监听事件，查找 `dom`)
 
 ```javascript
 import {useEffect} from "react";
@@ -54,21 +60,44 @@ useEffect(() => {
 
 ## useCallback
 
+```javascript
+```
+
+
+
 
 
 ## useMemo
+
+```javascript
+```
+
+
 
 
 
 ## useContext
 
+```javascript
+```
+
+
+
 
 
 ## useReducer
 
+```javascript
+```
 
 
 
+
+
+## useImperativeHandle
+
+```javascript
+```
 
 
 
