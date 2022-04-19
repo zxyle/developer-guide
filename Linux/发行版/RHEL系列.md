@@ -18,17 +18,21 @@ https://developers.redhat.com/products/rhel/download
 
 
 
-### 3. Rockey Linux
+### 3. Rocky Linux
 
 https://rockylinux.org/zh-hk/
 
 镜像站 https://mirrors.aliyun.com/rockylinux/
+
+替换镜像源参考: https://developer.aliyun.com/mirror/rockylinux
 
 
 
 ### 4. AlmaLinux
 
 https://almalinux.org/zh-hans/
+
+替换镜像源参考: https://developer.aliyun.com/mirror/almalinux
 
 
 
