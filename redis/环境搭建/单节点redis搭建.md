@@ -40,6 +40,9 @@ vim /etc/redis.conf
 - 修改daemonize 为yes
 - 去掉注释 requirepass foobared
 - appendonly 改为yes
+- 创建目录 `mkdir -p /usr/local/redis/data/`
+- 修改dir  `dir /usr/local/redis/data/`
+- 修改logfile  `logfile "/usr/local/redis/data/redis.log"`
 
 ## 运行起来
 ```

@@ -17,7 +17,7 @@ create database mydb1;
 create database mydb2 location '/user/hive/mydb2'
 
 -- 切换数据库
-use dbname
+use dbname;
 
 -- 删除数据库
 drop database mydb2;
@@ -42,9 +42,9 @@ DESC t1;
 
 -- 创建表
 create table testa (
-  id int,
-  name string,
-  area string
+  id int comment 'ID',
+  name string comment '姓名',
+  area string  comment '地区'
 ) partitioned by (create_time string) row format delimited fields terminated by ',' stored as textfile;
 
 -- 表增加字段
@@ -66,6 +66,9 @@ lines terminated by '\n';
 
 ## 丢弃表
 TRUNCATE TABLE my_table;
+
+# 删除表
+DROP TABLE my_table;
 ```
 
 
@@ -118,7 +121,7 @@ lifecycle 365;
 insert into table dws_qdsjzx_ptdsjpt_yqyd_indexes_dt
   partition (ds='20210624')
 (establish_day,etps_code,run_except_2y_valid,industry_category,	sxbzx_latest_timedelta,	administrative_penalties_times_2y,abnormal_operations_times_2y,run_except_3y_increse_rate,punish_action_3y_increse_rate,punish_action_2y_fake_rate,sxbzx_count_2y,registered_capital)
-VAlues(2712,0,0,0,0,0,0,0,0,0,0,50)
+values(2712,0,0,0,0,0,0,0,0,0,0,50)
 ```
 
 
@@ -126,9 +129,14 @@ VAlues(2712,0,0,0,0,0,0,0,0,0,0,50)
 ## 查询并插入
 
 ```sql
-INSERT OVERWRITE TABLE target 
+INSERT OVERWRITE TABLE target_table 
 SELECT col1, col2
   FROM source;
+  
+
+CREATE TABLE target_table AS 
+SELECT col1, col2
+FROM source;
 ```
 
 
