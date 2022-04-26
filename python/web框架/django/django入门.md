@@ -1,3 +1,13 @@
+## 修改settings.py
+
+```python
+LANGUAGE_CODE = 'zh-hans'
+
+TIME_ZONE = 'Asia/Shanghai'
+```
+
+
+
 ## 创建项目
 
 
