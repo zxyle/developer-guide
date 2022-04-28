@@ -5,6 +5,6 @@
 ## cnpm
 
 ```bash
-npm install cnpm -g --registry=https://registry.npm.taobao.org
+npm install cnpm -g --registry=http://registry.npmmirror.com
 ```
 
