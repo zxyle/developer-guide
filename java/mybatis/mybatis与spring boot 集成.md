@@ -7,7 +7,7 @@ http://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/
 <dependency>
   <groupId>org.mybatis.spring.boot</groupId>
   <artifactId>mybatis-spring-boot-starter</artifactId>
-  <version>2.1.3</version>
+  <version>2.2.2</version>
 </dependency>
 
 <!--mysql驱动-->
@@ -37,5 +37,65 @@ mybatis.configuration.cache-enabled=true
 
 # 日志
 logging.level.com.example.springbootwithmybatis.dao=debug
+```
+
+
+
+## 编写实体类
+
+```java
+import lombok.Data;
+import lombok.ToString;
+
+import java.util.Date;
+
+@Data
+@ToString
+public class Student {
+    private Long id;
+    private Date createTime;
+    private Date updateTime;
+    private String name;
+    private Integer age;
+}
+```
+
+
+
+## 编写Mapper
+
+```java
+import org.apache.ibatis.annotations.*;
+
+import java.util.List;
+
+@Mapper
+public interface StudentMapper {
+
+    @Select("select * from student")
+    List<Student> list();
+
+    @Insert({"insert into student(name, age) values(#{name}, #{age})"})
+    @Options(useGeneratedKeys = true, keyProperty = "id")
+    int add(Student student);
+
+    @Select("SELECT * FROM student WHERE name = #{name111}")
+    Student findByName(@Param("name111") String name);
+}
+```
+
+
+
+## 编写XML
+
+在resources\mappers\ProducesMapper.xml
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.StudentMapper">
+
+
+</mapper>
 ```
 

@@ -33,7 +33,7 @@ PUT /索引名/_mapping
 - store: 是否将数据进行独立存储，默认为 false， 原始文本存储在_source里, 这个会解析得快，但也占用更多空间
 - analyzer： 分词器  如 `ik_max_word`
 
-## 查询索引
+## 查询索引的mapping
 
 ```
 # 两种方法
