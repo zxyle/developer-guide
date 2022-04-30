@@ -25,12 +25,13 @@ yum -y install net-tools
 
 ## 用法
 ```
-netstat -nlp | grep 8080
+netstat -nlp | grep 端口号
 ```
 
 
 
 ```bash
-netstat -anp 查看端口信息
+# 查看端口信息
+netstat -anp | grep 端口号
 ```
 
