@@ -67,7 +67,7 @@ yarn config get registry
 >https://registry.yarnpkg.com
 
 // 设置国内源
-yarn config set registry http://registry.npm.taobao.org
+yarn config set registry http://registry.npmmirror.com
 ```
 
 

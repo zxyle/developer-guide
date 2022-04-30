@@ -11,7 +11,7 @@ from sqlalchemy.dialects.mysql import TINYINT, INTEGER, FLOAT, BIGINT, VARCHAR, 
 
 Base = declarative_base()
 
-engine = create_engine('mysql+mysqlconnector://root:1404133491Zx.@127.0.0.1:3306/spider?charset=utf8', echo=False)
+engine = create_engine('mysql+mysqlconnector://root:12345678@127.0.0.1:3306/spider?charset=utf8', echo=False)
 
 session = sessionmaker(bind=engine)
 session = session()
@@ -20,7 +20,7 @@ session = session()
 # ORM test
 class User(Base):
     # 表名
-    __tablename__ = 'hhh'
+    __tablename__ = 'user'
 
     id = Column(mysql.BIGINT(unsigned=True), primary_key=True, autoincrement=True, nullable=False, comment="主键id")
     create_time = Column(DATETIME, nullable=False, comment="创建时间", server_default=text("NOW()"))
@@ -54,7 +54,7 @@ import sqlalchemy.dialects.mysql as mysql
 from sqlalchemy import Table, Column, MetaData, text, DATETIME, String
 from sqlalchemy import create_engine
 
-engine = create_engine("mysql+pymysql://root:wuwei2020@192.168.1.172:3306/car?charset=utf8mb4", echo=False)
+engine = create_engine("mysql+pymysql://root:12345678@127.0.0.1:3306/car?charset=utf8mb4", echo=False)
 
 # 定义表语句
 metadata = MetaData()
@@ -105,10 +105,12 @@ with engine.connect() as conn:
 
 ## 连接池设置
 
-- pool_recycle
-- pool_size
-- pool_timeout
-- max_overflow
+| 参数         | 含义 |
+| ------------ | ---- |
+| pool_recycle |      |
+| pool_size    |      |
+| pool_timeout |      |
+| max_overflow |      |
 
 ## MySQL
 

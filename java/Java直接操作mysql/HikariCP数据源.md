@@ -1,4 +1,4 @@
-
+## 添加依赖
 
 ```xml
 <dependency>
@@ -13,6 +13,10 @@
     <version>8.0.20</version>
 </dependency>
 ```
+
+
+
+## 示例代码
 
 ```java
 import com.zaxxer.hikari.HikariConfig;

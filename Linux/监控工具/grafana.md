@@ -1,6 +1,8 @@
 ## 介绍
 数据可视化平台, https://grafana.com/
 
+安装包下载地址： https://mirrors.aliyun.com/grafana/
+
 
 
 ## CentOS安装
