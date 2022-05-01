@@ -4,7 +4,7 @@
 
 ## 安装
 
-```
+```bash
 yum install lsof -y
 ```
 
