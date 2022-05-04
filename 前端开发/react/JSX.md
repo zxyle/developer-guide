@@ -4,10 +4,6 @@ JSX (JavaScript XML) 需要babel.js 还有tsx
 
 
 
-## 定义虚拟DOM时，不要写引号，直接写HTML
-
-
-
 ## 引用变量或JS表达式时
 
 使用
@@ -33,6 +29,8 @@ const el (
 
 
 ## 内联样式编写 {{ key: value }}
+
+marginTop
 
 ```jsx
 <span styles={{ color: 'red' }}>Hello</span>
@@ -82,7 +80,7 @@ const songs = [
 
 const list = (
     <ul>
-        {songs.map((item) => (
+        {songs.map((item, index) => (
             <li key={item.id}>{item.name}</li>
         ))}
     </ul>
@@ -93,9 +91,9 @@ const list = (
 
 ## 特殊属性名
 
-|           |       |      |
-| --------- | ----- | ---- |
-| className | class |      |
-|           |       |      |
-|           |       |      |
+| react属性名 | html属性名 |      |
+| ----------- | ---------- | ---- |
+| className   | class      |      |
+| tabIndex    | tabindex   |      |
+|             |            |      |
 
