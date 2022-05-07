@@ -5,7 +5,8 @@
 
 ## 日期时间函数
 
-- now()  显示yyyy-mm-dd HH:MM:SS 格式日期
+- NOW()  显示yyyy-mm-dd HH:MM:SS 格式日期
+- DATE_FORMATE(NOW(), '%Y-%m-%d %H:%i:%s')
 
 
 
