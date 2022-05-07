@@ -2,6 +2,15 @@
 
 
 
+## 修改镜像地址
+
+```bash
+npm config get registry
+npm config set https://registry.npmmirror.com
+```
+
+
+
 ## cnpm
 
 ```bash
