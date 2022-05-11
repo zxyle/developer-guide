@@ -15,3 +15,17 @@
 ## 全局搜索响应中内容
 
 右上角有搜索
+
+
+
+### 截图
+
+打开控制台
+
+- **Windows快捷键： Control + Shift + I**
+- **macOS快捷键： Command + Shift + C**
+
+打开截图窗口
+
+- **Windows快捷键： Control + Shift + P**
+- **macOS快捷键： Command + Shift + P**
