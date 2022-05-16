@@ -7,3 +7,5 @@
 
 
 锁屏:  control + command + Q
+
+截屏 shift + command + 3
