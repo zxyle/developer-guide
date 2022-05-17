@@ -134,12 +134,10 @@ session.remove()
 
 
 
-
-
-## 新增单条
+## 插入单条
 
 ```python
-# insert into user(name, fullname, nickname) values('ed', 'Ed Jones', 'edsnickname')
+# INSERT INTO user(name, fullname, nickname) VALUES('ed', 'Ed Jones', 'edsnickname')
 ed_user = User(name='ed', fullname='Ed Jones', nickname='edsnickname')
 session.add(ed_user)
 session.commit()
@@ -147,9 +145,7 @@ session.commit()
 
 
 
-
-
-## 批量新增
+## 批量插入
 
 ```python
 # 添加多个对象
@@ -167,7 +163,7 @@ session.commit()
 ## 查询单条
 
 ```python
-# select * from user where username='ed' limit 1
+# SELECT * FROM user WHERE username='ed' LIMIT 1
 session.query(models.User).filter(models.User.username == 'ed').first()
 ```
 
@@ -176,7 +172,7 @@ session.query(models.User).filter(models.User.username == 'ed').first()
 ## 查询全部
 
 ```python
-# select * from user where username='xxx'
+# SELECT * FROM user WHERE username='xxx'
 session.query(models.User).filter(models.User.username == username).all()
 ```
 
@@ -204,7 +200,7 @@ session.query(User).order_by(User.create_time.desc()).all()　
 ## 更新
 
 ```python
-# 
+# UPDATE user SET name='Jack' WHERE id =1
 session.query(Users).filter_by(id=1).update({'name': "Jack"})
 ```
 
@@ -213,6 +209,7 @@ session.query(Users).filter_by(id=1).update({'name': "Jack"})
 ## count
 
 ```python
+# SELECT COUNT(*) FROM user
 session.query(models.User).count()
 ```
 

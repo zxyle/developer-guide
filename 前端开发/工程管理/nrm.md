@@ -2,8 +2,6 @@
 
 npm源 管理
 
-
-
 https://github.com/Pana/nrm
 
 
