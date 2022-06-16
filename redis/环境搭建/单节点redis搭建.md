@@ -51,7 +51,7 @@ redis-server /etc/redis.conf
 
 ## 测试
 ```
-redis-cli -a foobared
+redis-cli -a foobared --raw
 127.0.0.1:6379> ping
 PONG
 ```

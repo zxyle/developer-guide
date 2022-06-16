@@ -47,6 +47,11 @@ p[contains(text(),'剩余时间')]
 
 ## 元素选择
 
+- **last()**
+- **position**()
+- following-sibling
+- preceding-sibling
+
 
 
 

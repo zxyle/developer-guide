@@ -1,3 +1,5 @@
+### 基本操作
+
 ```bash
 # 创建新分支
 git branch 分支名
@@ -5,7 +7,7 @@ git branch 分支名
 # 切换分支
 git checkout 分支名
 
-# 创建新分支并切换新分支
+# 创建新分支并切换新分支 (以上命令二合一)
 git checkout -b 分支名
 
 # 切换到上一个分支
@@ -18,7 +20,7 @@ git branch -d 分支名
 
 
 
-## 查看操作
+### 查看操作
 
 ```bash
 # 查看本地所有分支
@@ -29,31 +31,27 @@ git branch -a
 
 # 查看远程分支
 git branch -r
-
-
 ```
 
 
 
-## 切换操作
-
-
-
-## 合并操作
+### 切换操作
 
 ```bash
-git merge --no-ff branch-name
-```
 
-
-
-## 切换远程分支
-
-```bash
+# 切换远程分支
 git checkout -b 本地分支名 origin/远程分支名
 ```
 
-## 分支
+
+
+### 合并操作
+
+```bash
+git merge --no-ff 分支名
+```
+
+### 分支
 
 - `git fetch` 将本地分支与远程保持同步
 - `git fetch --all` 将本地所有分支与远程保持同步

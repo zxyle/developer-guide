@@ -29,15 +29,11 @@ spring.cache.redis.use-key-prefix=true
 
 
 
-## 主启动类添加注解
-
-```java
-@EnableCaching
-```
-
-
-
 ## 使用注解
 
+- @EnableCaching 主启动类添加注解, 用于开启缓存功能
+
 - @Cacheable 需要指定一个cacheNames属性
-- 
+- @CacheEvict
+- @CachePut
+- @CacheConfig
