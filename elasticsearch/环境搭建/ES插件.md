@@ -19,15 +19,22 @@ https://github.com/mobz/elasticsearch-head
 ```
 POST /_analyze
 {
-  "analyzer": "ik_smart",
-  "text": "我是中国人"
-  
+    "analyzer": "ik_smart",
+    "text": "我是中国人"
 }
 ```
 
 ## 自定义词库
+
+### 网络词库
+
 - 创建`fenci.txt` 文件， 每一个词一行
 - 放入nginx目录
 - 修改`ik/config/IKAnalyzer.cfg.xml`文件
 - `<entry key="remote_ext_dict">http://192.168.56.10/es/feci.txt</entry>`
 - 重启es
+
+
+
+### 本地词库
+

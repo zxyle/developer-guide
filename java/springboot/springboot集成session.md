@@ -63,12 +63,16 @@ import javax.servlet.http.HttpSession;
 
 @RestController
 public class HelloController {
+  
+    @Autowired
+    HttpSession httpSession;
+    
     @RequestMapping("/")
-    public String helloAdmin(HttpSession session) {
+    public String helloAdmin() {
         // 设置cookie
-        // session.setAttribute();
+        // session.setAttribute("name", "zhengxiang");
         // 获取cookie
-        // session.getAttribute()
+        // session.getAttribute("name")
       
       	// 会话失效(一般用于退出登录，修改密码，账号禁用)
         // session.invalidate();

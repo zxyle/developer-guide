@@ -25,3 +25,26 @@
 ## paramterType
 
 输入参数对象
+
+
+
+### OGNL表达式
+
+```xml
+<if test="username == 'admin'">
+```
+
+
+
+### IN 查询
+
+```xml
+<select id="selectPostIn" resultType="domain.blog.Post">
+ SELECT * FROM POST P
+ WHERE ID in
+ <foreach item="item" index="index" collection="list"  open="(" separator="," close=")">
+    #{item}
+ </foreach>
+</select>
+```
+

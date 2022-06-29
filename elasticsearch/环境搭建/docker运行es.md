@@ -14,8 +14,8 @@ services:
       - D:/developer/dockerdata/elasticsearch/7.4.2/plugins:/usr/share/elasticsearch/plugins
       - D:/developer/dockerdata/elasticsearch/7.4.2/data:/usr/share/elasticsearch/data
     ports:
-      - 9200:9200
-      - 9300:9300
+      - "9200:9200"
+      - "9300:9300"
     environment:
       discovery.type: single-node
       ES_JAVA_OPS: -Xms128m -Xmx256m
@@ -23,7 +23,7 @@ services:
   kibana:
     image: kibana:7.4.2
     ports:
-      - 5601:5601
+      - "5601:5601"
     depends_on:
       - elasticsearch
 ```
