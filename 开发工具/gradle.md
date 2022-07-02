@@ -47,3 +47,13 @@ repositories {
     mavenCentral()
 }
 ```
+
+
+
+### 常用命令
+
+- gradle clean 清空build目录
+- gralde classes 编译业务代码和配置文件
+- gradle test  编译测试代码，生成测试报告
+- gradle build 构建项目
+- gradle build -x test 跳过测试构建
