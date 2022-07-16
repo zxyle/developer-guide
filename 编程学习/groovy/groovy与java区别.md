@@ -23,3 +23,31 @@ int[] array = [1, 2, 3]
 ```
 
 ## 包范围可见性
+
+
+
+- 如果没有歧义，可以省略调用函数的括号 如: `println "Hello world!"`
+- 定义变量，使用def，可以不声明变量类型，如: `def name = "John"`
+
+- 类的使用
+
+  ```groovy
+  class Person {
+      def name = "John"
+      def age = 30
+      def address = "123 Main St."
+      def city = "New York"
+      def state = "NY"
+      def zip = "10001"
+      def country = "USA"
+      def phone = "123-456-7890"
+  }
+  
+  def person = new Person(age: 11)
+  person["name"] = "Zhengxiang"
+  person.address = "西湖区"
+  println person.age
+  println person.getAddress()
+  ```
+
+  
