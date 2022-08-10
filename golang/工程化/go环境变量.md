@@ -1,4 +1,4 @@
-- GOPROXY 配置module代理
+- GOPROXY 配置module代理 https://goproxy.cn,direct
 - GOSUMDB
 - GOPRIVATE  配置私有仓库， 如http://gitlab.com/xxx
 - GONOPROXY

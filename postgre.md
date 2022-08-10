@@ -40,3 +40,5 @@ database 数据库
 schema  架构
 
 table 表
+
+字段

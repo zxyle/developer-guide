@@ -13,7 +13,7 @@ go env -w GO111MODULE=on
 
 ## 使用Goland创建项目
 New Project -> Go Modules(vgo) -> Proxy
-需要填写 
+需要填写 (使用逗号隔开)
 - https://goproxy.io
 - https://goproxy.cn
 - https://goproxy.baidu.com
