@@ -16,6 +16,14 @@ http://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/
   <artifactId>mysql-connector-java</artifactId>
   <scope>runtime</scope>
 </dependency>
+
+<!--postgresql驱动-->
+<dependency>
+  <groupId>org.postgresql</groupId>
+  <artifactId>postgresql</artifactId>
+  <scope>runtime</scope>
+  <version>42.5.0</version>
+</dependency>
 ```
 
 
@@ -23,11 +31,17 @@ http://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/
 ## 编写配置文件
 
 ```properties
-# mysql
+# mysql配置
 spring.datasource.username=root
 spring.datasource.password=123456
 spring.datasource.url=jdbc:mysql://127.0.0.1:3306/spring_boot_mybatis?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+# postgresql配置
+spring.datasource.username=postgres
+spring.datasource.password=mysecretpassword
+spring.datasource.url=jdbc:postgresql://127.0.0.1:5432/energy
+spring.datasource.driver-class-name=org.postgresql.Driver
 
 # mybatis (https://mybatis.org/mybatis-3/configuration.html#settings)
 mybatis.mapper-locations=classpath:mappers/*.xml
@@ -47,15 +61,32 @@ logging.level.com.example.springbootwithmybatis.dao=debug
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Date;
-
 @Data
 @ToString
 public class Student {
+    /**
+     * 主键ID
+     */
     private Long id;
+
+    /**
+     * 创建时间
+     */
     private Date createTime;
+
+    /**
+     * 修改时间
+     */
     private Date updateTime;
+
+    /**
+     * 姓名
+     */
     private String name;
+
+    /**
+     * 年龄
+     */
     private Integer age;
 }
 ```
@@ -104,7 +135,43 @@ public interface StudentMapper {
 ## 测试方法
 
 ```java
+@Autowired
+StudentMapper studentMapper;
+
+@Test
+void contextLoads() {
+  // 新增
+  Student student = new Student();
+  student.setName("zx");
+  student.setAge(19);
+  studentMapper.add(student);
+
+  // 查询所有
+  System.out.println(studentMapper.list());
+
+  // 按条件查询
+  // System.out.println(studentMapper.findByName("zx"));
+}
 ```
 
 
+
+
+
+## SQL
+
+```sql
+-- mysql
+
+
+-- postgresql
+create table student
+(
+    id          integer,
+    create_time date,
+    update_time date,
+    name        varchar,
+    age         integer
+);
+```
 

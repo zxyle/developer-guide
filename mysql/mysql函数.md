@@ -6,7 +6,8 @@
 ## 日期时间函数
 
 - NOW()  显示yyyy-mm-dd HH:MM:SS 格式日期
-- DATE_FORMATE(NOW(), '%Y-%m-%d %H:%i:%s')
+- DATE_FORMAT(NOW(), '%Y-%m-%d %H:%i:%s')
+- TIMESTAMPDIFF(SECOND, create_time, update_time)  时间差计算（本例为秒数）
 
 
 

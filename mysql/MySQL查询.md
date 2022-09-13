@@ -1,6 +1,6 @@
 ## select
 
-```
+```sql
 select * from table_name;
 ```
 
@@ -8,7 +8,7 @@ select * from table_name;
 
 ## where
 
-```
+```sql
 
 ```
 
@@ -22,13 +22,15 @@ SELECT address, AVG(age) AS "平均年龄", COUNT(*) as "人数" FROM students G
 
 ## having
 
-```
+过滤分组信息
+
+```sql
 
 ```
 
 ## 排序 order by
 
-```
+```sql
 order by field asc/desc;
 ```
 
@@ -80,4 +82,11 @@ order by field asc/desc;
 ```
 
 
+
+
+
+## 窗口函数
+
+```sql
+```
 

@@ -10,8 +10,6 @@ HiveQL(HQL) 转化成MapReduce 直接查询Hadoop数据
 
 
 
-
-
 ## Metastore
 
 元数据，存储包括表名、表的列和分区及其属性，表的数据所在目录， 默认使用Derby数据库，可以切换到Mysql.

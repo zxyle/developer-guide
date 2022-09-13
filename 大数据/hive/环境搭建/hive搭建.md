@@ -30,8 +30,11 @@ source /etc/profile
 
 ```bash
 # 将mysql驱动复制到lib目录下
+# https://mvnrepository.com/artifact/mysql/mysql-connector-java/8.0.29
+# wget https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.30/mysql-connector-java-8.0.30.jar
 
 # jar包改名，不然会日志冲突
+cd /opt/soft/apache-hive-3.1.2-bin/lib
 mv log4j-slf4j-impl-2.10.0.jar log4j-slf4j-impl-2.10.0.jar.bak
 ```
 
@@ -120,6 +123,15 @@ bin/schematool -dbType mysql -initSchema
 
 ```bash
 ./bin/hive
+```
+
+
+
+## 测试SQL语句
+
+```sql
+select current_date();
+
 ```
 
 

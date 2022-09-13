@@ -3,7 +3,7 @@ ES的索引可以理解为mysql的数据库
 
 ## 1. 创建索引
 
-> 类似mysql: CREATE DATABASE xxx
+> 类似mysql: CREATE DATABASE xxx;
 
 ```
 PUT /索引名
@@ -111,3 +111,16 @@ GET /index/_settings
 ```
 GET /index/_mapping
 ```
+
+
+
+## 修改索引设置
+
+```http
+PUT /index/_settings
+
+{
+	"index": {"max_result_window": 5000000}
+}
+```
+

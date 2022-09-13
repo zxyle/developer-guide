@@ -48,3 +48,31 @@
 </select>
 ```
 
+
+
+### 判断集合是否为空
+
+```xml
+<if test="deviceKinds!=null and deviceKinds.size() > 0">
+
+</if>
+```
+
+
+
+### 判断数组是否为空
+
+```xml
+<if test="deviceKinds!=null and deviceKinds.length > 0">
+
+</if>
+```
+
+
+
+### `$` 和`#`区别
+
+美元符不会转义
+
+井号会转义
+

@@ -14,7 +14,7 @@ show databases;
 create database mydb1;
 
 -- 创建数据库，指定hdfs存储位置
-create database mydb2 location '/user/hive/mydb2'
+create database mydb2 location '/user/hive/mydb2';
 
 -- 切换数据库
 use dbname;
@@ -64,7 +64,7 @@ fields terminated by '\t'
 lines terminated by '\n';
 
 
-## 丢弃表
+## 丢弃/截断表
 TRUNCATE TABLE my_table;
 
 # 删除表
@@ -81,15 +81,11 @@ LOAD DATA LOCAL INPATH '/root/test_data.txt' INTO TABLE testA PARTITION(create_t
 
 
 
-
-
 ## 退出
 
 ```sql
 quit;
 ```
-
-
 
 
 
@@ -129,14 +125,15 @@ values(2712,0,0,0,0,0,0,0,0,0,0,50)
 ## 查询并插入
 
 ```sql
+-- OVERWRITE 清空目标表
 INSERT OVERWRITE TABLE target_table 
 SELECT col1, col2
-  FROM source;
+  FROM source_table;
   
-
+-- 查询并创建表
 CREATE TABLE target_table AS 
 SELECT col1, col2
-FROM source;
+FROM source_table;
 ```
 
 
@@ -150,4 +147,15 @@ ORDER BY
 
 
 ## Union
+
+会去重
+
+
+
+## Union All
+
+不去重
+
+```sql
+```
 

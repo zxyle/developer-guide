@@ -10,3 +10,39 @@
 </properties>
 ```
 
+
+
+
+
+## 配置mirror
+
+```xml
+<repositories>
+  <repository>
+    <id>nexus-163</id>
+    <name>Nexus 163</name>
+    <url>https://mirrors.163.com/maven/repository/maven-public/</url>
+    <layout>default</layout>
+    <snapshots>
+      <enabled>false</enabled>
+    </snapshots>
+    <releases>
+      <enabled>true</enabled>
+    </releases>
+  </repository>
+</repositories>
+<pluginRepositories>
+  <pluginRepository>
+    <id>nexus-163</id>
+    <name>Nexus 163</name>
+    <url>https://mirrors.163.com/maven/repository/maven-public/</url>
+    <snapshots>
+      <enabled>false</enabled>
+    </snapshots>
+    <releases>
+      <enabled>true</enabled>
+    </releases>
+  </pluginRepository>
+</pluginRepositories>
+```
+

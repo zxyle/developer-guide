@@ -9,3 +9,7 @@
 锁屏:  control + command + Q
 
 截屏 shift + command + 3
+
+
+
+查看多个文件总体积 Option + Show Inspector
