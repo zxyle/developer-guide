@@ -18,7 +18,7 @@ grant replication slave on *.* to 'backup'@'%' identified by '123456';
 
 ## slave节点配置
 
-```
+```sql
 change master to master_host='db-master',master_user='backup',master_password='123456',master_log_file='mysql-bin.000003',master_log_pos=0,master_port=3306;
 ```
 

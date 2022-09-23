@@ -131,7 +131,6 @@ bin/schematool -dbType mysql -initSchema
 
 ```sql
 select current_date();
-
 ```
 
 
@@ -147,7 +146,8 @@ select current_date();
 ## 远程服务启动
 
 ```bash
-./bin/hiveserver2
+nohup bin/hive --service metastore & 
+nohup bin/hive --service hiveserver2 & 
 ```
 
 

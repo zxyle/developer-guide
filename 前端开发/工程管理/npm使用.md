@@ -2,6 +2,16 @@
 
 
 
+## 创建项目
+
+```bash
+mkdir app && cd app
+
+npm init
+```
+
+
+
 ## 修改镜像地址
 
 ```bash

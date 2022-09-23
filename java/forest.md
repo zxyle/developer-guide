@@ -39,8 +39,8 @@ private MyClient myClient;
 
 @Test
 public void testClient() {
-  String result = myClient.helloForest();
-  System.out.println(result);
+    String result = myClient.helloForest();
+    System.out.println(result);
 }
 ```
 

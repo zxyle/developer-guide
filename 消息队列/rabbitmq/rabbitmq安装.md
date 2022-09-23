@@ -5,10 +5,10 @@ rabbitmq:
     image: rabbitmq:3.8.9-management
     restart: always
     ports:
-      - 15672:15672
-      - 4369:4369
-      - 5672:5672
-      - 25672:25672
+      - "15672:15672"
+      - "4369:4369"
+      - "5672:5672"
+      - "25672:25672"
     volumes:
       - D:\developer\dockerdata\rabbitmq\data:/var/lib/rabbitmq
       - D:\developer\dockerdata\rabbitmq\log:/var/log/rabbitmq/log

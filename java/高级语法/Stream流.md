@@ -21,12 +21,12 @@
 
 - `.forEach()`
 - `.forEachOrdered()`
-- `.toArray()`
+- `.toArray()` 转换成数组
 - `.reduce()`
-- `.collect()`
+- `.collect()` 收集, `.collect(Collectors.toList())`  `.collect(Collectors.toSet())`
 - `.min()`
 - `.max()`
-- `.count()`
+- `.count()`  统计数量
 - `.anyMatch()`
 - `.allMatch()`
 - `.noneMatch()`

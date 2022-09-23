@@ -1,3 +1,5 @@
+## 介绍
+
 http://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/
 
 ## 引入依赖
@@ -61,6 +63,8 @@ logging.level.com.example.springbootwithmybatis.dao=debug
 import lombok.Data;
 import lombok.ToString;
 
+import java.time.LocalDateTime;
+
 @Data
 @ToString
 public class Student {
@@ -72,12 +76,12 @@ public class Student {
     /**
      * 创建时间
      */
-    private Date createTime;
+    private LocalDateTime createTime;
 
     /**
      * 修改时间
      */
-    private Date updateTime;
+    private LocalDateTime updateTime;
 
     /**
      * 姓名
@@ -119,7 +123,7 @@ public interface StudentMapper {
 
 ## 编写XML
 
-在resources\mappers\StudentMapper.xml
+在`resources/mappers/`目录下， 新建 `StudentMapper.xml`
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

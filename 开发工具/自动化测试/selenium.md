@@ -1,11 +1,17 @@
+## 介绍
+
+模拟浏览器操作
+
+
 
 ## 使用步骤
+
 - 查看chrome浏览器版本
 - 下载对应版本的驱动
 
 ## 驱动下载
 - [chromdriver](https://chromedriver.chromium.org/)
-- [镜像](https://npm.taobao.org/mirrors/chromedriver/)
+- [chromedriver镜像](https://registry.npmmirror.com/binary.html?path=chromedriver/)
 
 
 

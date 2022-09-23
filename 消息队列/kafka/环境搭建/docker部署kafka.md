@@ -20,6 +20,3 @@ wurstmeister/kafka:latest
 
 
 
-```yaml
-```
-

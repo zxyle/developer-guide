@@ -114,7 +114,7 @@ char ch = 'a';
 c风格字符串
 ```
 char str[] = "hello";
-string name = "郑翔";
+string name = "Jack";
 ```
 
 ## 布尔型

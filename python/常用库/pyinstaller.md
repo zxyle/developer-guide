@@ -17,7 +17,7 @@ pip3 install -i https://pypi.doubanio.com/simple pyinstaller
 命令格式： pyinstaller 参数 python文件
 
 ```bash
-pyinstaller -F -i xxx.ico hello.py
+pyinstaller -F -i favicon.ico main.py
 ```
 
 

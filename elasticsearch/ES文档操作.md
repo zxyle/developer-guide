@@ -51,7 +51,7 @@ PUT /索引名/_doc/{id}
 ```
 POST /索引名/_doc
 {
-    "name": "zheng",
+    "name": "Jack",
     "age": 27,
     "gender": "man"
 }

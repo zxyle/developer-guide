@@ -29,6 +29,8 @@ sftp.get("/root/logs.tar.gz", "logs.tar.gz")
 # 文件上传到远程
 sftp.put("./README.txt", "/root/README.txt")
 
+# TODO 补充关闭sftp
+
 # 关闭SSHClient
 ssh_client.close()
 

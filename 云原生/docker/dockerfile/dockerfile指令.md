@@ -31,14 +31,19 @@ LABEL maintainer=Xiang Zheng
 ## ARG
 
 ```dockerfile
+ARG DOCKER_USERNAME=library
+ 
+FROM ${DOCKER_USERNAME}/alpine
 ```
 
 ## WORKDIR - 工作目录
 ```dockerfile
+WORKDIR /opt/code
 ```
 
 ## COPY
 ```dockerfile
+COPY hadoop-env.sh /opt/soft/hadoop-${VERSION}/etc/hadoop/hadoop-env.sh
 ```
 
 
@@ -46,6 +51,7 @@ LABEL maintainer=Xiang Zheng
 ## ENV - 环境变量
 
 ```dockerfile
+ENV PATH=$PATH:$HADOOP_HOME/bin
 ```
 
 ## RUN
@@ -54,9 +60,10 @@ LABEL maintainer=Xiang Zheng
 
 ## ADD 
 
-解压
+复制并解压
 
 ```dockerfile
+ADD hadoop-3.2.0.tar.gz /opt/soft/
 ```
 
 ## CMD
@@ -91,6 +98,7 @@ EXPOSE 8080
 ## VOLUMN
 
 ```dockerfile
+VOLUME ["/data"] 
 ```
 
 

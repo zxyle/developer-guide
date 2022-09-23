@@ -64,3 +64,13 @@ public class ${NAME} {
 
 
 ## 如何调试?
+
+
+
+## 故障
+
+IDEA找不到本项目中其他包中存在的类
+
+方法一：maven-clean-compile
+
+方法二：File->Invalidate Caches/Restart… 重启项目加载index。

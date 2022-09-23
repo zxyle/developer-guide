@@ -98,9 +98,9 @@ System.out.println(users);
 ## 模糊查询
 ```java
 QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-queryWrapper.like("name", "郑");   // %郑%
-// queryWrapper.likeLeft()  // %郑
-// queryWrapper.likeRight() // 郑%
+queryWrapper.like("name", "王");   // %王%
+// queryWrapper.likeLeft()  // %王
+// queryWrapper.likeRight() // 王%
 List<User> users = userMapper.selectList(queryWrapper);
 System.out.println(users);
 ```

@@ -21,8 +21,8 @@ from parsel import Selector
 
 sel = Selector(html)
 
-sel.xpath()
+title = sel.xpath('//div[@class="title"]/text()').get()
 
-sel.css()
+sel.css('')
 ```
 
