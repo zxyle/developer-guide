@@ -8,7 +8,7 @@
 # bigint:    0 ~ 1844,6744,0737,0955,1615
 
 CREATE TABLE `表名` (
-  `id` int unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
   PRIMARY KEY (`id`)

@@ -9,7 +9,7 @@ select * from table_name;
 ## where
 
 ```sql
-
+WHERE
 ```
 
 
@@ -17,7 +17,12 @@ select * from table_name;
 ## 分组查询 group by
 
 ```sql
-SELECT address, AVG(age) AS "平均年龄", COUNT(*) as "人数" FROM students GROUP BY students.address;
+SELECT 
+    address, 
+    AVG(age) AS "平均年龄", 
+    COUNT(*) as "人数" 
+FROM students 
+GROUP BY students.address;
 ```
 
 ## having
@@ -25,7 +30,7 @@ SELECT address, AVG(age) AS "平均年龄", COUNT(*) as "人数" FROM students G
 过滤分组信息
 
 ```sql
-
+HAVING
 ```
 
 ## 排序 order by
@@ -36,12 +41,21 @@ order by field asc/desc;
 
 ## left join
 
+左外连接
+
 ```sql
+SELECT 
+    * 
+FROM t1
+LEFT JOIN t2
+ON t1.f1 = t2.f2
 ```
 
 
 
 ## right join
+
+右外连接
 
 ```sql
 ```
@@ -58,6 +72,7 @@ order by field asc/desc;
 ## limit
 
 ```sql
+LIMIT 10
 ```
 
 
@@ -65,6 +80,7 @@ order by field asc/desc;
 ## IN / NOT IN
 
 ```sql
+IN ('', '', '')
 ```
 
 
@@ -72,6 +88,7 @@ order by field asc/desc;
 ## BETWEEN AND
 
 ```sql
+create_time BETWEEN '2022-09-01 00:00:00' AND '2022-09-01 23:59:59'
 ```
 
 
@@ -79,6 +96,7 @@ order by field asc/desc;
 ## LIKE
 
 ```sql
+name LIKE '张%'
 ```
 
 
