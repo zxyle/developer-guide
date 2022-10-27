@@ -19,6 +19,8 @@
 ## 3. 时间同步
 ```bash
 systemctl enable chronyd --now
+
+# 查看当前日期
 date
 ```
 

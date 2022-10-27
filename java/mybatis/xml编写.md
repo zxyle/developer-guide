@@ -43,7 +43,7 @@
  SELECT * FROM POST P
  WHERE ID in
  <foreach item="item" index="index" collection="list"  open="(" separator="," close=")">
-    #{item}
+    #{item, jdbcType=BIGINT}
  </foreach>
 </select>
 ```
@@ -75,4 +75,26 @@
 美元符不会转义
 
 井号会转义
+
+
+
+### resultMap
+
+自定义映射
+
+```xml
+
+<resultMap id="empResultMap" type="Emp">
+  <id property="主键属性名" column="主键字段名"></id>
+  <result property="属性名" column="字段名"></result>
+  <result property="dept.did" column="did"></result>
+  <result property="dept.deptName" column="dept_name"></result>
+  <association property="" javaType="Dept">
+    <id></id>
+    <result></result>
+  
+  </association>
+  <collection
+</resultMap>
+```
 

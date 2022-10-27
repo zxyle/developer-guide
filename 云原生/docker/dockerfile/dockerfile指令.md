@@ -28,11 +28,13 @@ LABEL maintainer=Xiang Zheng
 
 
 
-## ARG
+## ARG - 参数
 
 ```dockerfile
+# 定义参数
 ARG DOCKER_USERNAME=library
- 
+
+# 使用参数
 FROM ${DOCKER_USERNAME}/alpine
 ```
 
@@ -41,7 +43,7 @@ FROM ${DOCKER_USERNAME}/alpine
 WORKDIR /opt/code
 ```
 
-## COPY
+## COPY - 复制到容器
 ```dockerfile
 COPY hadoop-env.sh /opt/soft/hadoop-${VERSION}/etc/hadoop/hadoop-env.sh
 ```
@@ -51,11 +53,19 @@ COPY hadoop-env.sh /opt/soft/hadoop-${VERSION}/etc/hadoop/hadoop-env.sh
 ## ENV - 环境变量
 
 ```dockerfile
+# 单个变量
 ENV PATH=$PATH:$HADOOP_HOME/bin
+
+# 多个变量
+ENV HADOOP_HOME=/opt/soft/hadoop-${HADOOP_VERSION} \
+    PATH=$PATH:$HADOOP_HOME/bin \
+    PATH=$PATH:$HADOOP_HOME/sbin
 ```
 
-## RUN
+## RUN - 执行命令
 ```dockerfile
+RUN cmd1 && \
+    cmd2 
 ```
 
 ## ADD 
@@ -95,7 +105,7 @@ EXPOSE 8080
 
 
 
-## VOLUMN
+## VOLUMN - 数据卷
 
 ```dockerfile
 VOLUME ["/data"] 

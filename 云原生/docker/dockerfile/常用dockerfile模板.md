@@ -50,6 +50,10 @@ VOLUME /usr/src/app
 
 ```dockerfile
 FROM centos:7
+
+# timezone
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+     && echo "Asia/Shanghai" > /etc/timezone
 ```
 
 
@@ -88,6 +92,21 @@ RUN sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list \
 # timezone
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
      && echo "Asia/Shanghai" > /etc/timezone
+```
+
+
+
+## Alpine环境dockerfile
+
+```dockerfile
+FROM alpine:3.15
+
+# 修改镜像源 修改时区
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories \
+    && apk update \
+    && apk add tzdata \
+    && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+    && echo "Asia/Shanghai" > /etc/timezone
 ```
 
 

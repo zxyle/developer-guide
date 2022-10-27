@@ -88,9 +88,13 @@ wrapper.in("ip", ips);
 ### 自定义分页
 
 ```java
-IPage<T> iPage = PageRequestUtil.checkForMp(request);
-IPage<T> list = breakerMapper.list(iPage, projectIds);
+// 分页请求对象
+IPage<T> iPage = new Page<>(pageNum, pageSize);
 
+// mapper 调用
+IPage<T> list = breakerMapper.list(iPage);
+
+// mapper 接口
 // IPage<T> list(IPage<T> page, List<Long> projects);
 ```
 
