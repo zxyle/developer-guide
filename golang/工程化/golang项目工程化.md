@@ -41,17 +41,3 @@ go env -w GOSUMDB="sum.golang.google.cn"
 
 ## Goland关闭创建项目的教程
 取消 Settings -> Plugins -> IDE Features Trainer
-
-
-## 多平台编译
-build-for-linux.sh
-```shell
-#!/usr/bin/env bash
-
-export CGO_ENABLED=0
-# darwin linux windows
-export GOOS=linux
-export GOARCH=amd64
-
-go build
-```

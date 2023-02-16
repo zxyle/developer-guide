@@ -23,6 +23,7 @@
 * 386 
 * amd64 
 * arm
+* arm64
 
 
 
@@ -49,8 +50,9 @@ export GOOS=linux
 export CGO_ENABLED=0
 # darwin linux windows
 export GOOS=linux
+# 386 amd64 arm64
 export GOARCH=amd64
 
-go build
+go build -o main
 ```
 

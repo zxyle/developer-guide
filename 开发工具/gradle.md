@@ -50,6 +50,15 @@ repositories {
 
 
 
+```
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+//    implementation 'cn.hutool:hutool-all:5.8.10'
+    implementation files("/Users/xiangzheng/.m2/repository/cn/hutool/hutool-all/5.8.4/hutool-all-5.8.4.jar")
+}
+```
+
 ### 常用命令
 
 - gradle clean 清空build目录

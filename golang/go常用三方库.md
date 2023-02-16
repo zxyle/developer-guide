@@ -34,7 +34,7 @@ type Product struct {
 }
 
 func main() {
-	dsn := "root:1404133491Zx.@tcp(192.168.31.248:3306)/xiuren?charset=utf8"
+	dsn := "root:1404133491Zx.@tcp(192.168.31.248:3306)/app?charset=utf8"
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
 		panic("failed to connect database")

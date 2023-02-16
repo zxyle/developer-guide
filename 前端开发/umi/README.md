@@ -1,3 +1,9 @@
+## Umi介绍
+
+企业级前端框架
+
+
+
 
 
 ## 创建项目
@@ -55,7 +61,7 @@ import {Link} from 'umi';
 命令式:
 
 ```javascript
-function goToPage(){
+function goToPage() {
     history.push("/user/one");
   }
 
@@ -72,4 +78,9 @@ function goToPage(){
 
 
 ## Mock数据
+
+```javascript
+```
+
+
 

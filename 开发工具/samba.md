@@ -26,3 +26,14 @@
 ## 加速方法
 
 - 使用网线
+
+
+
+
+
+## docker搭建samba
+
+```bash
+docker run 
+```
+

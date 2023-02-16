@@ -107,6 +107,10 @@ CASE gender
     WHEN 0 THEN "女"
     WHEN 1 THEN "男"
 END AS '性别'
+
+-- 如果左边表达式为null，则使用右边表达式的值替换
+IFNULL(null, 1);
+
 ```
 
 
