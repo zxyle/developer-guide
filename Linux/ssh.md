@@ -10,7 +10,10 @@
 - config   配置主机别名
 - authorized_keys 免密访问主机的公钥
 
+
+
 ## 生成key
+
 ```
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
@@ -34,13 +37,16 @@ ssh-keygen -t rsa -f /root/.ssh/id_rsa -N ''
 
 
 
-## 免密码登陆
+## 配置免密登陆
 
-```
+```bash
 ssh-copy-id -i .ssh/id_rsa.pub root@hostname
 ```
 
+
+
 ## 编辑 .ssh/config
+
 ```
 Host hostname
     HostName 149.129.246.83
@@ -49,7 +55,10 @@ Host hostname
     IdentityFile ~/.ssh/id_rsa
 ```
 
+
+
 ## 修改权限
-```
+
+```bash
 chmod  600  ~/.ssh/*
 ```

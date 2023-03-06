@@ -23,6 +23,6 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 ## 配置镜像源
 
-```
+```bash
 go env -w GOPROXY=https://goproxy.cn,direct
 ```

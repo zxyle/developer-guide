@@ -4,7 +4,7 @@
 
 
 
-## 安装
+## 安装依赖
 
 ```bash
 pip3 install -i https://pypi.doubanio.com/simple pyinstaller

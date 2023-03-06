@@ -10,7 +10,7 @@ rpm -ivh elasticsearch-7.16.1-x86_64.rpm
 # 设置外网访问
 echo "http.host: 0.0.0.0" >> /etc/elasticsearch/elasticsearch.yml
 
-# 设置自启并立即启动
+# 设置开机自启并立即启动
 sudo systemctl daemon-reload
 sudo systemctl enable elasticsearch.service --now
 
@@ -33,15 +33,13 @@ curl http://127.0.0.1:9200/
 - 配置文件:  `/etc/elasticsearch/`
 - 数据目录: `/var/lib/elasticsearch/`
 - 日志目录: `/var/log/elasticsearch/`
-- service: `/usr/lib/systemd/system/elasticsearch.service`
+- systemd service: `/usr/lib/systemd/system/elasticsearch.service`
 
 
 
 ## 其他设置
 
 ```bash
-
-
 # 重启服务
 systemctl restart elasticsearch
 ```

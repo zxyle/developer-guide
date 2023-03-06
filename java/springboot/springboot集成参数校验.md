@@ -31,35 +31,34 @@
 
 ## JSR注解
 
-| 注解             | 作用                                      | 举例                         |
-| ---------------- | ----------------------------------------- | ---------------------------- |
-| @Null            | 验证对象是否为null                        |                              |
-| @NotNull         |                                           |                              |
-| @Pattern         | 是否符合正则表达式的规则                  | @Pattern(regexp = "0[A\|B]") |
-| @NotBlank        |                                           |                              |
-| @NotEmpty        |                                           |                              |
-| @Length          |                                           |                              |
-| @AssertTrue      | 是否为 true                               |                              |
-| @AssertFalse     | 是否为 false                              |                              |
-| @Max             | 是否小等于指定的值                        |                              |
-| @Min             | 是否大等于指定的值                        |                              |
-| @DecimalMin      |                                           |                              |
-| @DecimalMax      |                                           |                              |
-| @Size            | 长度是否在给定的范围之内 (list map array) |                              |
-| @Digits          |                                           |                              |
-| @Past            | 是否在当前时间之前                        |                              |
-| @Future          | 是否在当前时间之后                        |                              |
-| @Email           | 是否是邮件地址                            |                              |
-| @NotEmpty        |                                           |                              |
-| @Range           |                                           |                              |
-| @Positive        | 必须为正数                                |                              |
-| @Negative        | 必须为负数                                |                              |
-| @NegativeOrZero  | 必须为负数或0                             |                              |
-| @PositiveOrZero  | 必须为正数或0                             |                              |
-| @PastOrPresent   |                                           |                              |
-| @FutureOrPresent |                                           |                              |
-| @Valid           | javax下 用来标注对象                      |                              |
-| @Validated       | spring下用来标注Controller                |                              |
+| 注解                               | 适用对象                                                     | 作用                       | 举例                         |
+| ---------------------------------- | ------------------------------------------------------------ | -------------------------- | ---------------------------- |
+| @Null                              |                                                              | 验证对象是否为null         |                              |
+| @NotNull                           |                                                              |                            |                              |
+| @Pattern                           | 字符串                                                       | 是否符合正则表达式的规则   | @Pattern(regexp = "0[A\|B]") |
+| @NotBlank                          |                                                              |                            |                              |
+| @NotEmpty                          | 列表、                                                       |                            |                              |
+| @Length                            | 检查字符串、集合、数组等对象的长度是否符合指定的约束条件。   |                            | @Length(min = 1, max = 100） |
+| @AssertTrue                        |                                                              | 是否为 true                |                              |
+| @AssertFalse                       |                                                              | 是否为 false               |                              |
+| @Max                               |                                                              | 是否小等于指定的值         |                              |
+| @Min                               |                                                              | 是否大等于指定的值         |                              |
+| @DecimalMin                        |                                                              |                            |                              |
+| @DecimalMax                        | 检查数字是否小于或等于指定的最大值                           |                            |                              |
+| @Size(min=1, max=10)               | list map array string                                        | 长度是否在给定的范围之内   |                              |
+| @Digits(integer = 3, fraction = 2) |                                                              | 整数和小数位数             |                              |
+| @Email                             |                                                              | 是否是邮件地址             |                              |
+| @Range(min = X, max = Y)           | int`、`long`、`double、Integer、Long、Double、BigDecimal、BigInteger |                            |                              |
+| @Positive                          | 同上                                                         | 必须为正数                 |                              |
+| @Negative                          | 同上                                                         | 必须为负数                 |                              |
+| @NegativeOrZero                    | 同上                                                         | 必须为负数或0              |                              |
+| @PositiveOrZero                    | 同上                                                         | 必须为正数或0              |                              |
+| @Past                              | LocalDateTime、LocalDate                                     | 是否在当前时间之前         |                              |
+| @Future                            | 同上                                                         | 是否在当前时间之后         |                              |
+| @PastOrPresent                     | 同上                                                         | 当前时间之前或当前时间     |                              |
+| @FutureOrPresent                   | 同上                                                         | 当前时间之后或当前时间     |                              |
+| @Valid                             |                                                              | javax下 用来标注对象       |                              |
+| @Validated                         |                                                              | spring下用来标注Controller |                              |
 
 
 
