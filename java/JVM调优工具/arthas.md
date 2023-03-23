@@ -25,3 +25,16 @@ java -jar arthas-boot.jar --telnet-port 9998 --http-port -1
 
 - dashboard - 数据面板
 - exit - 退出
+
+
+
+## trace
+
+用于跟踪代码每一个步骤耗时
+
+**格式：** trace + 类路径 + 方法名
+
+```bash
+trace com.example.demoapi.biz.auth.service.LoginService login
+```
+
